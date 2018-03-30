@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form (submit)="doSignup()">
+    <ion-list>
+
+      <ion-item>
+        <ion-label fixed>{{ 'First Name' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.firstname" name="firstname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>{{ 'Last Name' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.lastname" name="lastname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>{{ 'Email Address' | translate }}</ion-label>
+        <ion-input type="text" [(ngModel)]="account.email" name="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>{{ 'Password' | translate }}</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label fixed>{{ 'Confirm Password' | translate }}</ion-label>
+        <ion-input type="password" [(ngModel)]="account.confirmed_password" name="confirmed_password"></ion-input>
+      </ion-item>
+      <div padding>
+        <div class="g-recaptcha" data-sitekey="6Ldy508UAAAAAIqEDCQsWrScVbo1gi4lPBOGL0xO"></div>
+      </div>
+      <div padding>
+        <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
+      </div>
+
+    </ion-list>
+  </form>
+</ion-content>
