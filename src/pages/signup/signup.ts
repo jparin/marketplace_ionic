@@ -11,6 +11,7 @@ import { MainPage } from '../pages';
   templateUrl: 'signup.html'
 })
 export class SignupPage {
+  
   // The account fields for the login form.
   // If you're using the username field with or without email, make
   // sure to add it to the type
@@ -22,6 +23,8 @@ export class SignupPage {
     confirmed_password: '',
 
   };
+
+  signup_result;
 
   // Our translated text strings
   private signupErrorString: string;
@@ -39,7 +42,11 @@ export class SignupPage {
   doSignup() {
     // Attempt to login in through our User service
     this.user.signup(this.account).subscribe((resp) => {
-      this.navCtrl.push(MainPage);
+      this.signup_result = undefined;
+      this.signup_result = resp;
+      if(this.signup_result.status == 'success'){
+        this.navCtrl.push(MainPage);
+      }
     }, (err) => {
 
      // this.navCtrl.push(MainPage);

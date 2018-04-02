@@ -6,7 +6,8 @@ import { Injectable } from '@angular/core';
  */
 @Injectable()
 export class Api {
-  url: string = 'http://api.cestates.io/v1';
+  api_key : string = 'aTIWjdxBnLG6PxDTU3xfxSdn4Nfa8G4y';
+  url: string = 'http://127.0.0.1/v1';
 
   constructor(public http: HttpClient) {
   }
@@ -30,10 +31,12 @@ export class Api {
   }
 
   post(endpoint: string, body: any, reqOpts?: any) {
+    body.api_key = this.api_key;
     return this.http.post(this.url + '/' + endpoint, body, reqOpts);
   }
 
   put(endpoint: string, body: any, reqOpts?: any) {
+    body.api_key = this.api_key;
     return this.http.put(this.url + '/' + endpoint, body, reqOpts);
   }
 
@@ -42,6 +45,7 @@ export class Api {
   }
 
   patch(endpoint: string, body: any, reqOpts?: any) {
+    body.api_key = this.api_key;
     return this.http.patch(this.url + '/' + endpoint, body, reqOpts);
   }
 }

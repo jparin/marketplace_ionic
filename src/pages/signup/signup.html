@@ -2,6 +2,7 @@
 
   <ion-navbar>
     <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
+    <img class="logo-small" src="assets/img/logo-small.png">
   </ion-navbar>
 
 </ion-header>
@@ -12,27 +13,39 @@
     <ion-list>
 
       <ion-item>
-        <ion-label fixed>{{ 'First Name' | translate }}</ion-label>
+        <ion-label floating>{{ 'First Name' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="account.firstname" name="firstname"></ion-input>
       </ion-item>
+      <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors.firstname !== undefined" class="text-danger">
+          {{signup_result.errors?.firstname}}
+      </div>
       <ion-item>
-        <ion-label fixed>{{ 'Last Name' | translate }}</ion-label>
+        <ion-label floating>{{ 'Last Name' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="account.lastname" name="lastname"></ion-input>
       </ion-item>
+      <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors.lastname !== undefined" class="text-danger">
+          {{signup_result.errors?.lastname}}
+      </div>
       <ion-item>
-        <ion-label fixed>{{ 'Email Address' | translate }}</ion-label>
+        <ion-label floating>{{ 'Email Address' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="account.email" name="email"></ion-input>
       </ion-item>
+      <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors.email !== undefined" class="text-danger">
+          {{signup_result.errors?.email}}
+      </div>
       <ion-item>
-        <ion-label fixed>{{ 'Password' | translate }}</ion-label>
+        <ion-label floating>{{ 'Password' | translate }}</ion-label>
         <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
       </ion-item>
+      <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors.password !== undefined" class="text-danger">
+          {{signup_result.errors?.password}}
+      </div>
       <ion-item>
-        <ion-label fixed>{{ 'Confirm Password' | translate }}</ion-label>
+        <ion-label floating>{{ 'Confirm Password' | translate }}</ion-label>
         <ion-input type="password" [(ngModel)]="account.confirmed_password" name="confirmed_password"></ion-input>
       </ion-item>
-      <div padding>
-        <div class="g-recaptcha" data-sitekey="6Ldy508UAAAAAIqEDCQsWrScVbo1gi4lPBOGL0xO"></div>
+      <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors.confirmed_password !== undefined" class="text-danger">
+          {{signup_result.errors?.confirmed_password}}
       </div>
       <div padding>
         <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
