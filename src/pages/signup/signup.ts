@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { IonicPage, NavController, ToastController } from 'ionic-angular';
-
+import { IonicPage, NavController, ToastController, LoadingController } from 'ionic-angular';
 import { User } from '../../providers/providers';
 import { MainPage } from '../pages';
 
@@ -32,7 +31,8 @@ export class SignupPage {
   constructor(public navCtrl: NavController,
     public user: User,
     public toastCtrl: ToastController,
-    public translateService: TranslateService) {
+    public translateService: TranslateService,
+    public loadingCtrl: LoadingController) {
 
     this.translateService.get('SIGNUP_ERROR').subscribe((value) => {
       this.signupErrorString = value;
@@ -40,6 +40,7 @@ export class SignupPage {
   }
 
   doSignup() {
+    this.presentLoadingCustom();
     // Attempt to login in through our User service
     this.user.signup(this.account).subscribe((resp) => {
       this.signup_result = undefined;
@@ -59,5 +60,24 @@ export class SignupPage {
       });
       toast.present();
     });
+  }
+
+
+  presentLoadingCustom() {
+    let loading = this.loadingCtrl.create({
+      spinner: 'hide',
+      content: `
+        <div class="custom-spinner-container">
+          <div class="custom-spinner-box"></div>
+          <p>Please wait ....</p>
+        </div>`,
+      duration: 5000
+    });
+  
+    loading.onDidDismiss(() => {
+      console.log('Dismissed loading');
+    });
+  
+    loading.present();
   }
 }

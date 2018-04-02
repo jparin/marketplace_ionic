@@ -25684,6 +25684,14 @@ ion-navbar.toolbar {
   right: 10px;
 }
 
+.custom-spinner-box {
+  margin: auto;
+  background: url("../assets/img/logo-loader.gif") repeat transparent;
+  background-size: 100%;
+  width: 80px;
+  height: 80px;
+}
+
 page-item-create .profile-image-wrapper {
   text-align: center;
   margin: 20px 0;
