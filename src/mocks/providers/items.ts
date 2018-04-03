@@ -7,48 +7,43 @@ export class Items {
   items: Item[] = [];
 
   defaultItem: any = {
-    "name": "Burt Bear",
-    "profilePic": "assets/img/speakers/bear.jpg",
-    "about": "Burt is a Bear.",
+    "name": "Azalea Place",
+    "profilePic": "assets/img/properties/azalea.jpg",
+    "about": "Modern Serenity at the heart of Cebu."
   };
 
 
   constructor() {
     let items = [
       {
-        "name": "Burt Bear",
-        "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "name": "Azalea Place",
+        "profilePic": "assets/img/properties/azalea.jpg",
+        "about": "Modern Serenity at the heart of Cebu."
       },
       {
-        "name": "Charlie Cheetah",
-        "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
+        "name": "Galleria Residences",
+        "profilePic": "assets/img/properties/galleria-residence.jpg",
+        "about": "Amenities beyond compare, life above the ordinary."
       },
       {
-        "name": "Donald Duck",
-        "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
+        "name": "Magnolia Residences",
+        "profilePic": "assets/img/properties/magnolia-residence.jpg",
+        "about": "Creating new dimensions in your neighborhood."
       },
       {
-        "name": "Eva Eagle",
-        "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
+        "name": "The Radiance Manila Bay",
+        "profilePic": "assets/img/properties/Radiance-Manila-Bay.jpg",
+        "about": "A life of wellness amidst the magnificent Manila bay."
       },
       {
-        "name": "Ellie Elephant",
-        "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
+        "name": "The Sapphire Bloc",
+        "profilePic": "assets/img/properties/Sapphire-Bloc.jpg",
+        "about": "Make your life your own by picking the unique over the popular."
       },
       {
-        "name": "Molly Mouse",
-        "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
-      },
-      {
-        "name": "Paul Puppy",
-        "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
+        "name": "The Trion Towers",
+        "profilePic": "assets/img/properties/The-Trion-Towers.jpg",
+        "about": "The fastest growing commercial and business districts in Taguig City."
       }
     ];
 

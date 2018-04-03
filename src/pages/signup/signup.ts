@@ -24,6 +24,7 @@ export class SignupPage {
   };
 
   signup_result;
+  loading : any; // Loading spinner
 
   // Our translated text strings
   private signupErrorString: string;
@@ -43,13 +44,20 @@ export class SignupPage {
     this.presentLoadingCustom();
     // Attempt to login in through our User service
     this.user.signup(this.account).subscribe((resp) => {
-      this.signup_result = undefined;
       this.signup_result = resp;
+    
+      this.loading.dismiss(() => {
+        console.log('Dismissed loading');
+      });
+      
       if(this.signup_result.status == 'success'){
         this.navCtrl.push(MainPage);
       }
+     
     }, (err) => {
-
+      this.loading.dismiss(() => {
+        console.log('Dismissed loading');
+      });
      // this.navCtrl.push(MainPage);
 
       // Unable to sign up
@@ -62,22 +70,16 @@ export class SignupPage {
     });
   }
 
-
+ 
   presentLoadingCustom() {
-    let loading = this.loadingCtrl.create({
+    this.loading = this.loadingCtrl.create({
       spinner: 'hide',
       content: `
         <div class="custom-spinner-container">
           <div class="custom-spinner-box"></div>
           <p>Please wait ....</p>
-        </div>`,
-      duration: 5000
+        </div>`
     });
-  
-    loading.onDidDismiss(() => {
-      console.log('Dismissed loading');
-    });
-  
-    loading.present();
+    this.loading.present();
   }
 }

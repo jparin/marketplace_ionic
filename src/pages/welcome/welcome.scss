@@ -3,6 +3,7 @@ page-welcome {
     position: relative;
     background: url('../assets/img/splashbg.png') no-repeat transparent;
     background-size: cover;
+    border-bottom: 1px solid #000;
     height: 45%;
     z-index: 1;
     background-repeat: repeat-x;
@@ -27,6 +28,11 @@ page-welcome {
     width: 128px;
     height: 128px;
   }
+
+  .bg-coin {
+    // background: url('../assets/img/bg-coin-welcome.png') repeat transparent;
+  }
+
   .splash-intro {
     font-size: 18px;
     font-weight: bold;

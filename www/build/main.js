@@ -22,47 +22,47 @@ webpackEmptyAsyncContext.id = 130;
 
 var map = {
 	"../pages/cards/cards.module": [
-		330,
+		331,
 		12
 	],
 	"../pages/content/content.module": [
-		331,
+		330,
 		11
 	],
 	"../pages/item-create/item-create.module": [
-		342,
+		332,
 		10
 	],
 	"../pages/item-detail/item-detail.module": [
-		332,
+		334,
 		9
 	],
 	"../pages/list-master/list-master.module": [
-		334,
+		333,
 		8
 	],
 	"../pages/login/login.module": [
-		341,
+		337,
 		7
 	],
 	"../pages/menu/menu.module": [
-		333,
+		335,
 		6
 	],
 	"../pages/search/search.module": [
-		335,
+		336,
 		5
 	],
 	"../pages/settings/settings.module": [
-		336,
+		338,
 		4
 	],
 	"../pages/signup/signup.module": [
-		338,
+		342,
 		3
 	],
 	"../pages/tabs/tabs.module": [
-		337,
+		339,
 		2
 	],
 	"../pages/tutorial/tutorial.module": [
@@ -70,7 +70,7 @@ var map = {
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		339,
+		341,
 		0
 	]
 };
@@ -115,7 +115,7 @@ var Api = /** @class */ (function () {
     function Api(http) {
         this.http = http;
         this.api_key = 'aTIWjdxBnLG6PxDTU3xfxSdn4Nfa8G4y';
-        this.url = 'http://127.0.0.1/v1';
+        this.url = 'http://192.168.1.117/v1';
     }
     Api.prototype.get = function (endpoint, params, reqOpts) {
         if (!reqOpts) {
@@ -180,45 +180,40 @@ var Items = /** @class */ (function () {
     function Items() {
         this.items = [];
         this.defaultItem = {
-            "name": "Burt Bear",
-            "profilePic": "assets/img/speakers/bear.jpg",
-            "about": "Burt is a Bear.",
+            "name": "Azalea Place",
+            "profilePic": "assets/img/properties/azalea.jpg",
+            "about": "Modern Serenity at the heart of Cebu."
         };
         var items = [
             {
-                "name": "Burt Bear",
-                "profilePic": "assets/img/speakers/bear.jpg",
-                "about": "Burt is a Bear."
+                "name": "Azalea Place",
+                "profilePic": "assets/img/properties/azalea.jpg",
+                "about": "Modern Serenity at the heart of Cebu."
             },
             {
-                "name": "Charlie Cheetah",
-                "profilePic": "assets/img/speakers/cheetah.jpg",
-                "about": "Charlie is a Cheetah."
+                "name": "Galleria Residences",
+                "profilePic": "assets/img/properties/galleria-residence.jpg",
+                "about": "Amenities beyond compare, life above the ordinary."
             },
             {
-                "name": "Donald Duck",
-                "profilePic": "assets/img/speakers/duck.jpg",
-                "about": "Donald is a Duck."
+                "name": "Magnolia Residences",
+                "profilePic": "assets/img/properties/magnolia-residence.jpg",
+                "about": "Creating new dimensions in your neighborhood."
             },
             {
-                "name": "Eva Eagle",
-                "profilePic": "assets/img/speakers/eagle.jpg",
-                "about": "Eva is an Eagle."
+                "name": "The Radiance Manila Bay",
+                "profilePic": "assets/img/properties/Radiance-Manila-Bay.jpg",
+                "about": "A life of wellness amidst the magnificent Manila bay."
             },
             {
-                "name": "Ellie Elephant",
-                "profilePic": "assets/img/speakers/elephant.jpg",
-                "about": "Ellie is an Elephant."
+                "name": "The Sapphire Bloc",
+                "profilePic": "assets/img/properties/Sapphire-Bloc.jpg",
+                "about": "Make your life your own by picking the unique over the popular."
             },
             {
-                "name": "Molly Mouse",
-                "profilePic": "assets/img/speakers/mouse.jpg",
-                "about": "Molly is a Mouse."
-            },
-            {
-                "name": "Paul Puppy",
-                "profilePic": "assets/img/speakers/puppy.jpg",
-                "about": "Paul is a Puppy."
+                "name": "The Trion Towers",
+                "profilePic": "assets/img/properties/The-Trion-Towers.jpg",
+                "about": "The fastest growing commercial and business districts in Taguig City."
             }
         ];
         for (var _i = 0, items_1 = items; _i < items_1.length; _i++) {
@@ -376,19 +371,19 @@ var AppModule = /** @class */ (function () {
                 }),
                 __WEBPACK_IMPORTED_MODULE_9_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/cards/cards.module#CardsPageModule', name: 'CardsPage', segment: 'cards', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/content/content.module#ContentPageModule', name: 'ContentPage', segment: 'content', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cards/cards.module#CardsPageModule', name: 'CardsPage', segment: 'cards', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/item-create/item-create.module#ItemCreatePageModule', name: 'ItemCreatePage', segment: 'item-create', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/list-master/list-master.module#ListMasterPageModule', name: 'ListMasterPage', segment: 'list-master', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/item-detail/item-detail.module#ItemDetailPageModule', name: 'ItemDetailPage', segment: 'item-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/list-master/list-master.module#ListMasterPageModule', name: 'ListMasterPage', segment: 'list-master', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/item-create/item-create.module#ItemCreatePageModule', name: 'ItemCreatePage', segment: 'item-create', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["a" /* IonicStorageModule */].forRoot()

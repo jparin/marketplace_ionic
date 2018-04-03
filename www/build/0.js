@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 339:
+/***/ 341:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(118);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__welcome__ = __webpack_require__(352);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__welcome__ = __webpack_require__(354);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -44,7 +44,7 @@ var WelcomePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 352:
+/***/ 354:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -80,7 +80,7 @@ var WelcomePage = /** @class */ (function () {
     };
     WelcomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-welcome',template:/*ion-inline-start:"C:\marketplace_ionic\src\pages\welcome\welcome.html"*/'<ion-content scroll="false">\n  <div class="splash-bg"></div>\n  <div class="splash-info">\n    <div class="splash-logo"></div>\n    <div class="splash-intro">\n      <span style="font-size: 2em; display: block;">CEstates</span>\n      <span>Marketplace</span>\n    </div>\n  </div>\n  <div padding>\n    <button ion-button block (click)="signup()">{{ \'SIGNUP\' | translate }}</button>\n    <button ion-button block (click)="login()" >{{ \'LOGIN\' | translate }}</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"C:\marketplace_ionic\src\pages\welcome\welcome.html"*/
+            selector: 'page-welcome',template:/*ion-inline-start:"C:\marketplace_ionic\src\pages\welcome\welcome.html"*/'<ion-content scroll="false" class="bg-coin">\n  \n    <div class="splash-bg"></div>\n    <div class="splash-info">\n      <div class="splash-logo"></div>\n      <div class="splash-intro">\n        <span style="font-size: 2em; display: block;">CEstates</span>\n        <span>Marketplace</span>\n      </div>\n    </div>\n    <div padding>\n      <button ion-button block (click)="signup()">{{ \'SIGNUP\' | translate }}</button>\n      <button ion-button block (click)="login()" >{{ \'LOGIN\' | translate }}</button>\n    </div> \n  \n</ion-content>\n'/*ion-inline-end:"C:\marketplace_ionic\src\pages\welcome\welcome.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]])
     ], WelcomePage);
