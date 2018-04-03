@@ -1,2 +1,17 @@
 page-login {
+	.login-logo {
+		display: block;
+		margin: 0 auto;
+		padding: 40px 40px 0px 40px;
+		width: 260px;
+	}
+
+	h1 {
+		text-align: center;
+		display: block;
+		font-size: 2em !important;
+		font-weight: bold;
+		font-family: "Roboto", "Helvetica Neue", sans-serif;
+	}
 }
+
