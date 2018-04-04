@@ -1,6 +1,6 @@
 webpackJsonp([14],{
 
-/***/ 335:
+/***/ 333:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(117);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__marketplace__ = __webpack_require__(355);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__marketplace__ = __webpack_require__(353);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,7 +41,7 @@ var MarketplacePageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 355:
+/***/ 353:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -103,7 +103,7 @@ var MarketplacePage = /** @class */ (function () {
     };
     MarketplacePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-marketplace',template:/*ion-inline-start:"C:\Users\Joed\marketplace_ionic\src\pages\marketplace\marketplace.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>{{ \'LIST_MASTER_TITLE\' | translate }}</ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="addItem()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n  <ion-list>\n    <ion-item-sliding *ngFor="let property of currentProperties">\n      <button ion-item (click)="openProperty(property)">\n        <ion-avatar property-start>\n          <img [src]="property.profilePic" />\n        </ion-avatar>\n        <h2>{{property.name}}</h2>\n        <p>{{property.about}}</p>\n        <ion-note property-end *ngIf="property.note">{{property.note}}</ion-note>\n        <ion-grid class="property-sub-details-grid">\n          <ion-row>\n            <ion-col>\n              Price per slot(CET): <span>{{property.price_per_slot}}</span>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col>\n              City: <span>{{property.city}}</span>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col>\n              Available slots: <span>{{property.available_slots}}</span>\n            </ion-col>\n            <ion-col>\n              Participant: <span>{{property.participant}}</span>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </button>\n\n      <ion-item-options>\n        <button ion-button color="danger" (click)="deleteItem(property)">\n          {{ \'DELETE_BUTTON\' | translate }}\n        </button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"C:\Users\Joed\marketplace_ionic\src\pages\marketplace\marketplace.html"*/,
+            selector: 'page-marketplace',template:/*ion-inline-start:"C:\Users\Joed\marketplace_ionic\src\pages\marketplace\marketplace.html"*/'<ion-header>\n\n  <ion-navbar color="primary">\n    <ion-title>{{ \'LIST_MASTER_TITLE\' | translate }}</ion-title>\n\n    <ion-buttons end>\n      <button ion-button icon-only (click)="addProperty()">\n        <ion-icon name="add"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n  <ion-list>\n    <ion-item-sliding *ngFor="let property of currentProperties">\n      <button ion-item (click)="openProperty(property)">\n        <ion-avatar property-start>\n          <img [src]="property.profilePic" />\n        </ion-avatar>\n        <h2>{{property.name}}</h2>\n        <p>{{property.about}}</p>\n        <ion-note property-end *ngIf="property.note">{{property.note}}</ion-note>\n        <ion-grid class="property-sub-details-grid">\n          <ion-row>\n            <ion-col>\n              Price per slot(CET): <span>{{property.price_per_slot}}</span>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col>\n              City: <span>{{property.city}}</span>\n            </ion-col>\n          </ion-row>\n          <ion-row>\n            <ion-col>\n              Available slots: <span>{{property.available_slots}}</span>\n            </ion-col>\n            <ion-col>\n              Participant: <span>{{property.participant}}</span>\n            </ion-col>\n          </ion-row>\n        </ion-grid>\n      </button>\n\n      <ion-item-options>\n        <button ion-button color="danger" (click)="deleteProperty(property)">\n          {{ \'DELETE_BUTTON\' | translate }}\n        </button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n</ion-content>'/*ion-inline-end:"C:\Users\Joed\marketplace_ionic\src\pages\marketplace\marketplace.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_providers__["b" /* Properties */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]])
     ], MarketplacePage);

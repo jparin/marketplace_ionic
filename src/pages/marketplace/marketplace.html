@@ -4,7 +4,7 @@
     <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
 
     <ion-buttons end>
-      <button ion-button icon-only (click)="addItem()">
+      <button ion-button icon-only (click)="addProperty()">
         <ion-icon name="add"></ion-icon>
       </button>
     </ion-buttons>
@@ -46,7 +46,7 @@
       </button>
 
       <ion-item-options>
-        <button ion-button color="danger" (click)="deleteItem(property)">
+        <button ion-button color="danger" (click)="deleteProperty(property)">
           {{ 'DELETE_BUTTON' | translate }}
         </button>
       </ion-item-options>

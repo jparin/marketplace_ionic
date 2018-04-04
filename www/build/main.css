@@ -25821,6 +25821,36 @@ page-marketplace .property-sub-details-grid {
   border: 1px solid #9ac5eb !important;
 }
 
+page-property-create .profile-image-wrapper {
+  text-align: center;
+  margin: 20px 0;
+}
+
+page-property-create .profile-image-wrapper .profile-image {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+page-property-create .profile-image-wrapper .profile-image-placeholder {
+  display: inline-block;
+  background-color: #eee;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+page-property-create .profile-image-wrapper .profile-image-placeholder ion-icon {
+  font-size: 44px;
+  margin-bottom: -10px;
+  margin-top: 10px;
+}
+
 page-property-detail .property-profile {
   width: 100%;
   background-position: center center;
