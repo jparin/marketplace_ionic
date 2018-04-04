@@ -1,4 +1,4 @@
-webpackJsonp([19],{
+webpackJsonp([20],{
 
 /***/ 130:
 /***/ (function(module, exports) {
@@ -22,79 +22,83 @@ webpackEmptyAsyncContext.id = 130;
 
 var map = {
 	"../pages/cards/cards.module": [
-		333,
-		18
+		330,
+		19
 	],
 	"../pages/content/content.module": [
-		330,
-		17
+		331,
+		18
 	],
 	"../pages/dashboard/dashboard.module": [
-		331,
-		16
-	],
-	"../pages/item-create/item-create.module": [
 		332,
-		15
-	],
-	"../pages/item-detail/item-detail.module": [
-		334,
-		14
+		17
 	],
 	"../pages/list-master/list-master.module": [
-		335,
-		13
+		333,
+		16
 	],
 	"../pages/login/login.module": [
-		336,
-		12
+		334,
+		15
 	],
 	"../pages/marketplace/marketplace.module": [
-		337,
-		11
+		335,
+		14
 	],
 	"../pages/menu/menu.module": [
-		338,
-		10
+		336,
+		13
+	],
+	"../pages/messages/messages.module": [
+		337,
+		12
 	],
 	"../pages/my-properties/my-properties.module": [
-		339,
-		9
+		338,
+		11
 	],
 	"../pages/news/news.module": [
-		340,
-		8
+		339,
+		10
 	],
 	"../pages/profile/profile.module": [
+		340,
+		9
+	],
+	"../pages/property-create/property-create.module": [
 		341,
+		8
+	],
+	"../pages/property-detail/property-detail.module": [
+		342,
 		7
 	],
 	"../pages/search/search.module": [
-		342,
+		343,
 		6
 	],
 	"../pages/settings/settings.module": [
-		343,
+		344,
 		5
 	],
 	"../pages/signup/signup.module": [
-		344,
+		345,
 		4
 	],
 	"../pages/tabs/tabs.module": [
-		345,
+		346,
 		3
 	],
 	"../pages/tutorial/tutorial.module": [
-		346,
+		347,
 		2
 	],
 	"../pages/wallet/wallet.module": [
-		347,
+		348,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		348,
+		349,
 		0
 	]
 };
@@ -186,9 +190,9 @@ var Api = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Items; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Properties; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_item__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_property__ = __webpack_require__(308);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -200,15 +204,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var Items = /** @class */ (function () {
-    function Items() {
-        this.items = [];
-        this.defaultItem = {
+var Properties = /** @class */ (function () {
+    function Properties() {
+        this.properties = [];
+        this.defaultProperty = {
             "name": "Azalea Place",
             "profilePic": "assets/img/properties/azalea.jpg",
             "about": "Modern Serenity at the heart of Cebu."
         };
-        var items = [
+        var properties = [
             {
                 "name": "Azalea Place",
                 "profilePic": "assets/img/properties/azalea.jpg",
@@ -264,42 +268,42 @@ var Items = /** @class */ (function () {
                 "participant": 10
             }
         ];
-        for (var _i = 0, items_1 = items; _i < items_1.length; _i++) {
-            var item = items_1[_i];
-            this.items.push(new __WEBPACK_IMPORTED_MODULE_1__models_item__["a" /* Item */](item));
+        for (var _i = 0, properties_1 = properties; _i < properties_1.length; _i++) {
+            var property = properties_1[_i];
+            this.properties.push(new __WEBPACK_IMPORTED_MODULE_1__models_property__["a" /* Property */](property));
         }
     }
-    Items.prototype.query = function (params) {
+    Properties.prototype.query = function (params) {
         if (!params) {
-            return this.items;
+            return this.properties;
         }
-        return this.items.filter(function (item) {
+        return this.properties.filter(function (property) {
             for (var key in params) {
-                var field = item[key];
+                var field = property[key];
                 if (typeof field == 'string' && field.toLowerCase().indexOf(params[key].toLowerCase()) >= 0) {
-                    return item;
+                    return property;
                 }
                 else if (field == params[key]) {
-                    return item;
+                    return property;
                 }
             }
             return null;
         });
     };
-    Items.prototype.add = function (item) {
-        this.items.push(item);
+    Properties.prototype.add = function (property) {
+        this.properties.push(property);
     };
-    Items.prototype.delete = function (item) {
-        this.items.splice(this.items.indexOf(item), 1);
+    Properties.prototype.delete = function (property) {
+        this.properties.splice(this.properties.indexOf(property), 1);
     };
-    Items = __decorate([
+    Properties = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
         __metadata("design:paramtypes", [])
-    ], Items);
-    return Items;
+    ], Properties);
+    return Properties;
 }());
 
-//# sourceMappingURL=items.js.map
+//# sourceMappingURL=properties.js.map
 
 /***/ }),
 
@@ -356,7 +360,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__ = __webpack_require__(118);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngx_translate_http_loader__ = __webpack_require__(284);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ionic_angular__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__mocks_providers_items__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__mocks_providers_properties__ = __webpack_require__(183);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__providers_providers__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_component__ = __webpack_require__(329);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -419,18 +423,19 @@ var AppModule = /** @class */ (function () {
                 }),
                 __WEBPACK_IMPORTED_MODULE_9_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* MyApp */], {}, {
                     links: [
+                        { loadChildren: '../pages/cards/cards.module#CardsPageModule', name: 'CardsPage', segment: 'cards', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/content/content.module#ContentPageModule', name: 'ContentPage', segment: 'content', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/item-create/item-create.module#ItemCreatePageModule', name: 'ItemCreatePage', segment: 'item-create', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cards/cards.module#CardsPageModule', name: 'CardsPage', segment: 'cards', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/item-detail/item-detail.module#ItemDetailPageModule', name: 'ItemDetailPage', segment: 'item-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-master/list-master.module#ListMasterPageModule', name: 'ListMasterPage', segment: 'list-master', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/marketplace/marketplace.module#MarketplacePageModule', name: 'MarketplacePage', segment: 'marketplace', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/messages/messages.module#MessagesPageModule', name: 'MessagesPage', segment: 'messages', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/my-properties/my-properties.module#MyPropertiesPageModule', name: 'MyPropertiesPage', segment: 'my-properties', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/property-create/property-create.module#PropertyCreatePageModule', name: 'PropertyCreatePage', segment: 'property-create', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/property-detail/property-detail.module#PropertyDetailPageModule', name: 'PropertyDetailPage', segment: 'property-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
@@ -448,14 +453,15 @@ var AppModule = /** @class */ (function () {
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_11__providers_providers__["a" /* Api */],
-                __WEBPACK_IMPORTED_MODULE_10__mocks_providers_items__["a" /* Items */],
+                __WEBPACK_IMPORTED_MODULE_10__mocks_providers_properties__["a" /* Properties */],
                 __WEBPACK_IMPORTED_MODULE_11__providers_providers__["d" /* User */],
                 __WEBPACK_IMPORTED_MODULE_3__ionic_native_camera__["a" /* Camera */],
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */],
                 __WEBPACK_IMPORTED_MODULE_5__ionic_native_status_bar__["a" /* StatusBar */],
                 { provide: __WEBPACK_IMPORTED_MODULE_11__providers_providers__["c" /* Settings */], useFactory: provideSettings, deps: [__WEBPACK_IMPORTED_MODULE_6__ionic_storage__["b" /* Storage */]] },
                 // Keep this to enable Ionic's runtime error handling during development
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_9_ionic_angular__["c" /* IonicErrorHandler */] }
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_9_ionic_angular__["c" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_10__mocks_providers_properties__["a" /* Properties */]
             ]
         })
     ], AppModule);
@@ -470,28 +476,28 @@ var AppModule = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Item; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Property; });
 /**
  * A generic model that our Master-Detail pages list, create, and delete.
  *
- * Change "Item" to the noun your app will use. For example, a "Contact," or a
+ * Change "Property" to the noun your app will use. For example, a "Contact," or a
  * "Customer," or a "Animal," or something like that.
  *
- * The Items service manages creating instances of Item, so go ahead and rename
+ * The Property service manages creating instances of Property, so go ahead and rename
  * that something that fits your app as well.
  */
-var Item = /** @class */ (function () {
-    function Item(fields) {
+var Property = /** @class */ (function () {
+    function Property(fields) {
         // Quick and dirty extend/assign fields to this model
         for (var f in fields) {
             // @ts-ignore
             this[f] = fields[f];
         }
     }
-    return Item;
+    return Property;
 }());
 
-//# sourceMappingURL=item.js.map
+//# sourceMappingURL=property.js.map
 
 /***/ }),
 
@@ -794,13 +800,13 @@ var MyApp = /** @class */ (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api_api__ = __webpack_require__(182);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mocks_providers_items__ = __webpack_require__(183);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mocks_providers_properties__ = __webpack_require__(183);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__settings_settings__ = __webpack_require__(309);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__user_user__ = __webpack_require__(310);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__api_api__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__mocks_providers_items__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_2__settings_settings__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_3__user_user__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__mocks_providers_properties__["a"]; });
 
 
 

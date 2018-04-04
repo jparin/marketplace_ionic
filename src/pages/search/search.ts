@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { Item } from '../../models/item';
-import { Items } from '../../providers/providers';
+import { Property } from '../../models/property';
+import { Properties } from '../../providers/providers';
 
 @IonicPage()
 @Component({
@@ -11,30 +11,30 @@ import { Items } from '../../providers/providers';
 })
 export class SearchPage {
 
-  currentItems: any = [];
+  currentProperties: any = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public items: Items) { }
+  constructor(public navCtrl: NavController, public navParams: NavParams, public properties: Properties) { }
 
   /**
-   * Perform a service for the proper items.
+   * Perform a service for the proper properties.
    */
-  getItems(ev) {
+  getProperties(ev) {
     let val = ev.target.value;
     if (!val || !val.trim()) {
-      this.currentItems = [];
+      this.currentProperties = [];
       return;
     }
-    this.currentItems = this.items.query({
+    this.currentProperties = this.properties.query({
       name: val
     });
   }
 
   /**
-   * Navigate to the detail page for this item.
+   * Navigate to the detail page for this property.
    */
-  openItem(item: Item) {
-    this.navCtrl.push('ItemDetailPage', {
-      item: item
+  openProperty(property: Property) {
+    this.navCtrl.push('PropertyDetailPage', {
+      property: property
     });
   }
 

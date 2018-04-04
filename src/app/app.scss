@@ -103,8 +103,8 @@ h1,h2,h3,h4,h5 {
 		}
 
 		div{
-			border-bottom: 1px solid #1f4aa0;
 			box-shadow: none;
+			border: none !important;
 		}
 	}
 
@@ -114,3 +114,8 @@ h1,h2,h3,h4,h5 {
 	width: 16px;
 }
 
+
+/*************** UTILITIES ******************/
+.no-padding-top {
+	padding-top: 0px !important;
+}

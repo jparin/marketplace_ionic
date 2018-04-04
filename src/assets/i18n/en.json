@@ -51,11 +51,11 @@
 
   "LIST_MASTER_TITLE": "Marketplace - Properties",
 
-  "ITEM_CREATE_TITLE": "Sell Property",
-  "ITEM_CREATE_CHOOSE_IMAGE": "Add Image",
+  "PROPERTY_CREATE_TITLE": "Sell Property",
+  "PROPERTY_CREATE_CHOOSE_IMAGE": "Add Image",
 
-  "ITEM_NAME_PLACEHOLDER": "Name",
-  "ITEM_ABOUT_PLACEHOLDER": "About",
+  "PROPERTY_NAME_PLACEHOLDER": "Name",
+  "PROPERTY_ABOUT_PLACEHOLDER": "About",
 
   "DONE_BUTTON": "Done",
   "CANCEL_BUTTON": "Cancel",

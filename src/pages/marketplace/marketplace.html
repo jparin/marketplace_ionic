@@ -15,38 +15,38 @@
 <ion-content>
 
   <ion-list>
-    <ion-item-sliding *ngFor="let item of currentItems">
-      <button ion-item (click)="openItem(item)">
-        <ion-avatar item-start>
-          <img [src]="item.profilePic" />
+    <ion-item-sliding *ngFor="let property of currentProperties">
+      <button ion-item (click)="openProperty(property)">
+        <ion-avatar property-start>
+          <img [src]="property.profilePic" />
         </ion-avatar>
-        <h2>{{item.name}}</h2>
-        <p>{{item.about}}</p>
-        <ion-note item-end *ngIf="item.note">{{item.note}}</ion-note>
+        <h2>{{property.name}}</h2>
+        <p>{{property.about}}</p>
+        <ion-note property-end *ngIf="property.note">{{property.note}}</ion-note>
         <ion-grid class="property-sub-details-grid">
           <ion-row>
             <ion-col>
-              Price per slot(CET): <span>{{item.price_per_slot}}</span>
+              Price per slot(CET): <span>{{property.price_per_slot}}</span>
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col>
-              City: <span>{{item.city}}</span>
+              City: <span>{{property.city}}</span>
             </ion-col>
           </ion-row>
           <ion-row>
             <ion-col>
-              Available slots: <span>{{item.available_slots}}</span>
+              Available slots: <span>{{property.available_slots}}</span>
             </ion-col>
             <ion-col>
-              Participant: <span>{{item.participant}}</span>
+              Participant: <span>{{property.participant}}</span>
             </ion-col>
           </ion-row>
         </ion-grid>
       </button>
 
       <ion-item-options>
-        <button ion-button color="danger" (click)="deleteItem(item)">
+        <button ion-button color="danger" (click)="deleteItem(property)">
           {{ 'DELETE_BUTTON' | translate }}
         </button>
       </ion-item-options>

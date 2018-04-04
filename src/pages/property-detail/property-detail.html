@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{ property.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="property-profile" text-center #profilePic [style.background-image]="'url(' + property.profilePic + ')'">
+  </div>
+
+  <div class="property-detail" padding>
+    <h2>{{property.name}}</h2>
+    <ion-grid class="property-sub-details-grid">
+      <ion-row>
+        <ion-col>
+          Price per slot(CET): <span>{{property.price_per_slot}}</span>
+        </ion-col>
+        <ion-col>
+          City: <span>{{property.city}}</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          Available slots: <span>{{property.available_slots}}</span>
+        </ion-col>
+        <ion-col>
+          Participant: <span>{{property.participant}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <p>{{property.about}}</p>
+  </div>
+</ion-content>

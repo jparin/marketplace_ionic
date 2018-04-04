@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ModalController } from 'ionic-angular';
 
-import { Item } from '../../models/item';
-import { Items } from '../../providers/providers';
+import { Property } from '../../models/property';
+import { Properties } from '../../providers/providers';
 
 /**
  * Generated class for the MarketplacePage page.
@@ -17,39 +17,39 @@ import { Items } from '../../providers/providers';
   templateUrl: 'marketplace.html',
 })
 export class MarketplacePage {
-  currentItems: Item[];
+  currentProperties: Property[];
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
-    this.currentItems = this.items.query();
+  constructor(public navCtrl: NavController, public properties: Properties, public modalCtrl: ModalController) {
+    this.currentProperties = this.properties.query();
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad MarketplacePage');
   }
 
-  addItem() {
-    let addModal = this.modalCtrl.create('ItemCreatePage');
-    addModal.onDidDismiss(item => {
-      if (item) {
-        this.items.add(item);
+  addProperty() {
+    let addModal = this.modalCtrl.create('PropertyCreatePage');
+    addModal.onDidDismiss(property => {
+      if (property) {
+        this.properties.add(property);
       }
     })
     addModal.present();
   }
 
   /**
-   * Delete an item from the list of items.
+   * Delete an property from the list of properties.
    */
-  deleteItem(item) {
-    this.items.delete(item);
+  deleteProperty(property) {
+    this.properties.delete(property);
   }
 
   /**
-   * Navigate to the detail page for this item.
+   * Navigate to the detail page for this property.
    */
-  openItem(item: Item) {
-    this.navCtrl.push('ItemDetailPage', {
-      item: item
+  openProperty(property: Property) {
+    this.navCtrl.push('PropertyDetailPage', {
+      property: property
     });
   }
 }

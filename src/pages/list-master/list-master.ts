@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, ModalController, NavController } from 'ionic-angular';
 
-import { Item } from '../../models/item';
-import { Items } from '../../providers/providers';
+import { Property } from '../../models/property';
+import { Properties } from '../../providers/providers';
 
 @IonicPage()
 @Component({
@@ -10,45 +10,45 @@ import { Items } from '../../providers/providers';
   templateUrl: 'list-master.html'
 })
 export class ListMasterPage {
-  currentItems: Item[];
+  currentProperties: Property[];
 
-  constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
-    this.currentItems = this.items.query();
+  constructor(public navCtrl: NavController, public propertys: Properties, public modalCtrl: ModalController) {
+    this.currentProperties = this.propertys.query();
   }
 
   /**
-   * The view loaded, let's query our items for the list
+   * The view loaded, let's query our propertys for the list
    */
   ionViewDidLoad() {
   }
 
   /**
-   * Prompt the user to add a new item. This shows our ItemCreatePage in a
-   * modal and then adds the new item to our data source if the user created one.
+   * Prompt the user to add a new property. This shows our PropertyCreatePage in a
+   * modal and then adds the new property to our data source if the user created one.
    */
-  addItem() {
-    let addModal = this.modalCtrl.create('ItemCreatePage');
-    addModal.onDidDismiss(item => {
-      if (item) {
-        this.items.add(item);
+  addProperty() {
+    let addModal = this.modalCtrl.create('PropertyCreatePage');
+    addModal.onDidDismiss(property => {
+      if (property) {
+        this.propertys.add(property);
       }
     })
     addModal.present();
   }
 
   /**
-   * Delete an item from the list of items.
+   * Delete an property from the list of propertys.
    */
-  deleteItem(item) {
-    this.items.delete(item);
+  deleteProperty(property) {
+    this.propertys.delete(property);
   }
 
   /**
-   * Navigate to the detail page for this item.
+   * Navigate to the detail page for this property.
    */
-  openItem(item: Item) {
-    this.navCtrl.push('ItemDetailPage', {
-      item: item
+  openProperty(property: Property) {
+    this.navCtrl.push('PropertyDetailPage', {
+      property: property
     });
   }
 }
