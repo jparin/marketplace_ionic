@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>{{ 'SIGNUP_TITLE' | translate }}</ion-title>
     <img class="logo-small" src="assets/img/logo-small.png">
   </ion-navbar>
@@ -11,7 +11,6 @@
 <ion-content>
   <form (submit)="doSignup()">
     <ion-list>
-
       <ion-item>
         <ion-label floating>{{ 'First Name' | translate }}</ion-label>
         <ion-input type="text" [(ngModel)]="account.firstname" name="firstname"></ion-input>
@@ -48,7 +47,7 @@
           {{signup_result.errors?.confirmed_password}}
       </div>
       <div padding>
-        <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
+        <button ion-button color="secondary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
       </div>
 
     </ion-list>

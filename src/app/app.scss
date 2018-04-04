@@ -30,3 +30,87 @@
     height: 80px;
 }
 
+h1,h2,h3,h4,h5 {
+	font-family: "Roboto", "Helvetica Neue", sans-serif;
+}
+
+.menu-toolbar {
+	
+
+	h1 {
+		text-align:center;
+		margin-bottom: 0px;
+	}
+
+	.toolbar-title {
+	
+		font-family: "Roboto", "Helvetica Neue", sans-serif !important;
+		font-size: 2rem !important;
+	}
+
+	.menu-sub-heading {
+		display: block;
+		text-align: center;
+		margin-bottom: 0px;
+		font-style: italic;
+	}
+
+	.menu-other-content {
+		font-size: 1.4rem;
+		display:block;
+		text-align:center;
+		padding: 10px;
+
+		ion-icon {
+			color: #00aeef;
+			margin-right: 8px;
+		}
+
+		div	{
+
+		}
+
+		div:nth-child(2){
+
+		}
+	}
+
+	button {
+
+		div {
+			border-bottom: none !important;
+		}
+	}
+
+	.menu-logo {
+		width: 120px;
+	    display: block;
+	    margin: 20px auto 0px;
+	}
+
+}
+
+.menu-pages-list {
+
+	div ion-list button {
+
+		color: #fff;
+		background-color: #1f4aa0;
+
+		ion-icon {
+			color: #e3e3e3;
+			padding-right:4px;
+		}
+
+		div{
+			border-bottom: 1px solid #1f4aa0;
+			box-shadow: none;
+		}
+	}
+
+}
+
+.cestates-currency {
+	width: 16px;
+}
+

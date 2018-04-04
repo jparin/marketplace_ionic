@@ -1,4 +1,4 @@
-webpackJsonp([13],{
+webpackJsonp([19],{
 
 /***/ 130:
 /***/ (function(module, exports) {
@@ -22,55 +22,79 @@ webpackEmptyAsyncContext.id = 130;
 
 var map = {
 	"../pages/cards/cards.module": [
-		332,
-		12
+		333,
+		18
 	],
 	"../pages/content/content.module": [
+		330,
+		17
+	],
+	"../pages/dashboard/dashboard.module": [
 		331,
-		11
+		16
 	],
 	"../pages/item-create/item-create.module": [
-		333,
-		10
+		332,
+		15
 	],
 	"../pages/item-detail/item-detail.module": [
-		330,
-		9
+		334,
+		14
 	],
 	"../pages/list-master/list-master.module": [
-		334,
-		8
+		335,
+		13
 	],
 	"../pages/login/login.module": [
-		342,
-		7
+		336,
+		12
+	],
+	"../pages/marketplace/marketplace.module": [
+		337,
+		11
 	],
 	"../pages/menu/menu.module": [
-		336,
-		6
+		338,
+		10
+	],
+	"../pages/my-properties/my-properties.module": [
+		339,
+		9
+	],
+	"../pages/news/news.module": [
+		340,
+		8
+	],
+	"../pages/profile/profile.module": [
+		341,
+		7
 	],
 	"../pages/search/search.module": [
-		335,
-		5
+		342,
+		6
 	],
 	"../pages/settings/settings.module": [
-		337,
-		4
+		343,
+		5
 	],
 	"../pages/signup/signup.module": [
-		341,
-		3
+		344,
+		4
 	],
 	"../pages/tabs/tabs.module": [
-		338,
-		2
+		345,
+		3
 	],
 	"../pages/tutorial/tutorial.module": [
-		340,
+		346,
+		2
+	],
+	"../pages/wallet/wallet.module": [
+		347,
 		1
 	],
 	"../pages/welcome/welcome.module": [
-		339,
+		348,
 		0
 	]
 };
@@ -188,32 +212,56 @@ var Items = /** @class */ (function () {
             {
                 "name": "Azalea Place",
                 "profilePic": "assets/img/properties/azalea.jpg",
-                "about": "Modern Serenity at the heart of Cebu."
+                "about": "Modern Serenity at the heart of Cebu.",
+                "price_per_slot": 1000000,
+                "city": "Taguig",
+                "available_slots": 4,
+                "participant": 2
             },
             {
                 "name": "Galleria Residences",
                 "profilePic": "assets/img/properties/galleria-residence.jpg",
-                "about": "Amenities beyond compare, life above the ordinary."
+                "about": "Amenities beyond compare, life above the ordinary.",
+                "price_per_slot": 2000000,
+                "city": "Taguig",
+                "available_slots": 4,
+                "participant": 3
             },
             {
                 "name": "Magnolia Residences",
                 "profilePic": "assets/img/properties/magnolia-residence.jpg",
-                "about": "Creating new dimensions in your neighborhood."
+                "about": "Creating new dimensions in your neighborhood.",
+                "price_per_slot": 3000000,
+                "city": "Las Pinas",
+                "available_slots": 4,
+                "participant": 6
             },
             {
                 "name": "The Radiance Manila Bay",
                 "profilePic": "assets/img/properties/Radiance-Manila-Bay.jpg",
-                "about": "A life of wellness amidst the magnificent Manila bay."
+                "about": "A life of wellness amidst the magnificent Manila bay.",
+                "price_per_slot": 4000000,
+                "city": "Pasay",
+                "available_slots": 4,
+                "participant": 10
             },
             {
                 "name": "The Sapphire Bloc",
                 "profilePic": "assets/img/properties/Sapphire-Bloc.jpg",
-                "about": "Make your life your own by picking the unique over the popular."
+                "about": "Make your life your own by picking the unique over the popular.",
+                "price_per_slot": 5000000,
+                "city": "Tagaytay",
+                "available_slot": 4,
+                "participant": 10
             },
             {
                 "name": "The Trion Towers",
                 "profilePic": "assets/img/properties/The-Trion-Towers.jpg",
-                "about": "The fastest growing commercial and business districts in Taguig City."
+                "about": "The fastest growing commercial and business districts in Taguig City.",
+                "price_per_slot_per_slot": 6000000,
+                "city": "Taguig",
+                "available_slots": 4,
+                "participant": 10
             }
         ];
         for (var _i = 0, items_1 = items; _i < items_1.length; _i++) {
@@ -265,12 +313,12 @@ var Items = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Tab2Root; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return Tab3Root; });
 // The page the user lands on after opening the app and without a session
-var FirstRunPage = 'TutorialPage';
+var FirstRunPage = 'LoginPage';
 // The main page the user will see as they use the app over a long period of time.
 // Change this if not using tabs
 var MainPage = 'TabsPage';
 // The initial root pages for our tabs (remove if not using tabs)
-var Tab1Root = 'ListMasterPage';
+var Tab1Root = 'MarketplacePage';
 var Tab2Root = 'SearchPage';
 var Tab3Root = 'SettingsPage';
 //# sourceMappingURL=pages.js.map
@@ -371,19 +419,25 @@ var AppModule = /** @class */ (function () {
                 }),
                 __WEBPACK_IMPORTED_MODULE_9_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/item-detail/item-detail.module#ItemDetailPageModule', name: 'ItemDetailPage', segment: 'item-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/content/content.module#ContentPageModule', name: 'ContentPage', segment: 'content', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/cards/cards.module#CardsPageModule', name: 'CardsPage', segment: 'cards', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/dashboard/dashboard.module#DashboardPageModule', name: 'DashboardPage', segment: 'dashboard', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/item-create/item-create.module#ItemCreatePageModule', name: 'ItemCreatePage', segment: 'item-create', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/cards/cards.module#CardsPageModule', name: 'CardsPage', segment: 'cards', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/item-detail/item-detail.module#ItemDetailPageModule', name: 'ItemDetailPage', segment: 'item-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/list-master/list-master.module#ListMasterPageModule', name: 'ListMasterPage', segment: 'list-master', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/marketplace/marketplace.module#MarketplacePageModule', name: 'MarketplacePage', segment: 'marketplace', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/menu/menu.module#MenuPageModule', name: 'MenuPage', segment: 'menu', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/my-properties/my-properties.module#MyPropertiesPageModule', name: 'MyPropertiesPage', segment: 'my-properties', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/news/news.module#NewsPageModule', name: 'NewsPage', segment: 'news', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/search/search.module#SearchPageModule', name: 'SearchPage', segment: 'search', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/settings/settings.module#SettingsPageModule', name: 'SettingsPage', segment: 'settings', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/signup/signup.module#SignupPageModule', name: 'SignupPage', segment: 'signup', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/wallet/wallet.module#WalletPageModule', name: 'WalletPage', segment: 'wallet', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/welcome/welcome.module#WelcomePageModule', name: 'WelcomePage', segment: 'welcome', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_6__ionic_storage__["a" /* IonicStorageModule */].forRoot()
@@ -670,17 +724,14 @@ var MyApp = /** @class */ (function () {
         this.splashScreen = splashScreen;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_5__pages_pages__["a" /* FirstRunPage */];
         this.pages = [
-            { title: 'Tutorial', component: 'TutorialPage' },
-            { title: 'Welcome', component: 'WelcomePage' },
-            { title: 'Tabs', component: 'TabsPage' },
-            { title: 'Cards', component: 'CardsPage' },
-            { title: 'Content', component: 'ContentPage' },
-            { title: 'Login', component: 'LoginPage' },
-            { title: 'Signup', component: 'SignupPage' },
-            { title: 'Master Detail', component: 'ListMasterPage' },
-            { title: 'Menu', component: 'MenuPage' },
-            { title: 'Settings', component: 'SettingsPage' },
-            { title: 'Search', component: 'SearchPage' }
+            { title: 'Dashboard', icon: 'ios-apps', component: 'DashboardPage' },
+            { title: 'Messages', icon: 'ios-chatboxes', component: 'MessagesPage' },
+            { title: 'Marketplace', icon: 'ios-home', component: 'MarketplacePage' },
+            { title: 'My Properties', icon: 'ios-home-outline', component: 'MarketplacePage' },
+            { title: 'Profile', icon: 'md-contact', component: 'ProfilePage' },
+            { title: 'Wallet', icon: 'md-card', component: 'WalletPage' },
+            { title: 'Settings', icon: 'ios-cog', component: 'SettingsPage' },
+            { title: 'Search', icon: 'ios-search', component: 'SearchPage' }
         ];
         platform.ready().then(function () {
             // Okay, so the platform is ready and our plugins are available.
@@ -727,7 +778,7 @@ var MyApp = /** @class */ (function () {
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            template: "<ion-menu [content]=\"content\">\n    <ion-header>\n      <ion-toolbar>\n        <ion-title>Pages</ion-title>\n      </ion-toolbar>\n    </ion-header>\n\n    <ion-content>\n      <ion-list>\n        <button menuClose ion-item *ngFor=\"let p of pages\" (click)=\"openPage(p)\">\n          {{p.title}}\n        </button>\n      </ion-list>\n    </ion-content>\n\n  </ion-menu>\n  <ion-nav #content [root]=\"rootPage\"></ion-nav>"
+            template: "<ion-menu [content]=\"content\">\n    <ion-header>\n      <ion-toolbar class=\"menu-toolbar\">\n        <img class=\"menu-logo\" src=\"assets/imgs/logo.png\">\n        <h1>Cestates</h1>\n        <span class=\"menu-sub-heading\">Marketplace</span>\n        <div class=\"menu-other-content\">\n          <div>\n             <ion-icon name=\"person\"></ion-icon> <span>Joed Parin</span>\n          </div>\n          <div>\n            <img class=\"cestates-currency\" src=\"assets/imgs/logo-small.png\"> \n            <span>123432.323</span>\n          </div>\n        </div>\n      </ion-toolbar>\n    </ion-header>\n\n    <ion-content class=\"menu-pages-list\">\n      <ion-list>\n        <button menuClose ion-item *ngFor=\"let p of pages\" (click)=\"openPage(p)\"><ion-icon name=\"{{p.icon}}\"></ion-icon>\n          {{p.title}}\n        </button>\n      </ion-list>\n    </ion-content>\n\n  </ion-menu>\n  <ion-nav #content [root]=\"rootPage\"></ion-nav>"
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["c" /* TranslateService */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_6__providers_providers__["c" /* Settings */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular__["a" /* Config */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_1__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);

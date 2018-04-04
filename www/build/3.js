@@ -1,15 +1,15 @@
 webpackJsonp([3],{
 
-/***/ 341:
+/***/ 345:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SignupPageModule", function() { return SignupPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(118);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__signup__ = __webpack_require__(354);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs__ = __webpack_require__(364);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,40 +20,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var SignupPageModule = /** @class */ (function () {
-    function SignupPageModule() {
+var TabsPageModule = /** @class */ (function () {
+    function TabsPageModule() {
     }
-    SignupPageModule = __decorate([
+    TabsPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_3__signup__["a" /* SignupPage */],
+                __WEBPACK_IMPORTED_MODULE_3__tabs__["a" /* TabsPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__signup__["a" /* SignupPage */]),
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["e" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__tabs__["a" /* TabsPage */]),
                 __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["b" /* TranslateModule */].forChild()
             ],
             exports: [
-                __WEBPACK_IMPORTED_MODULE_3__signup__["a" /* SignupPage */]
+                __WEBPACK_IMPORTED_MODULE_3__tabs__["a" /* TabsPage */]
             ]
         })
-    ], SignupPageModule);
-    return SignupPageModule;
+    ], TabsPageModule);
+    return TabsPageModule;
 }());
 
-//# sourceMappingURL=signup.module.js.map
+//# sourceMappingURL=tabs.module.js.map
 
 /***/ }),
 
-/***/ 354:
+/***/ 364:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SignupPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__ = __webpack_require__(118);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_providers__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages__ = __webpack_require__(223);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -68,75 +67,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var SignupPage = /** @class */ (function () {
-    function SignupPage(navCtrl, user, toastCtrl, translateService, loadingCtrl) {
+
+var TabsPage = /** @class */ (function () {
+    function TabsPage(navCtrl, translateService) {
         var _this = this;
         this.navCtrl = navCtrl;
-        this.user = user;
-        this.toastCtrl = toastCtrl;
         this.translateService = translateService;
-        this.loadingCtrl = loadingCtrl;
-        // The account fields for the login form.
-        // If you're using the username field with or without email, make
-        // sure to add it to the type
-        this.account = {
-            firstname: '',
-            lastname: '',
-            email: '',
-            password: '',
-            confirmed_password: '',
-        };
-        this.translateService.get('SIGNUP_ERROR').subscribe(function (value) {
-            _this.signupErrorString = value;
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_3__pages__["c" /* Tab1Root */];
+        this.tab2Root = __WEBPACK_IMPORTED_MODULE_3__pages__["d" /* Tab2Root */];
+        this.tab3Root = __WEBPACK_IMPORTED_MODULE_3__pages__["e" /* Tab3Root */];
+        this.tab1Title = " ";
+        this.tab2Title = " ";
+        this.tab3Title = " ";
+        translateService.get(['TAB1_TITLE', 'TAB2_TITLE', 'TAB3_TITLE']).subscribe(function (values) {
+            _this.tab1Title = values['TAB1_TITLE'];
+            _this.tab2Title = values['TAB2_TITLE'];
+            _this.tab3Title = values['TAB3_TITLE'];
         });
     }
-    SignupPage.prototype.doSignup = function () {
-        var _this = this;
-        this.presentLoadingCustom();
-        // Attempt to login in through our User service
-        this.user.signup(this.account).subscribe(function (resp) {
-            _this.signup_result = resp;
-            _this.loading.dismiss(function () {
-                console.log('Dismissed loading');
-            });
-            if (_this.signup_result.status == 'success') {
-                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pages__["b" /* MainPage */]);
-            }
-        }, function (err) {
-            _this.loading.dismiss(function () {
-                console.log('Dismissed loading');
-            });
-            // this.navCtrl.push(MainPage);
-            // Unable to sign up
-            var toast = _this.toastCtrl.create({
-                message: _this.signupErrorString,
-                duration: 3000,
-                position: 'top'
-            });
-            toast.present();
-        });
-    };
-    SignupPage.prototype.presentLoadingCustom = function () {
-        this.loading = this.loadingCtrl.create({
-            spinner: 'hide',
-            content: "\n        <div class=\"custom-spinner-container\">\n          <div class=\"custom-spinner-box\"></div>\n          <p>Please wait ....</p>\n        </div>"
-        });
-        this.loading.present();
-    };
-    SignupPage = __decorate([
+    TabsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-signup',template:/*ion-inline-start:"C:\marketplace_ionic\src\pages\signup\signup.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{ \'SIGNUP_TITLE\' | translate }}</ion-title>\n    <img class="logo-small" src="assets/img/logo-small.png">\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <form (submit)="doSignup()">\n    <ion-list>\n\n      <ion-item>\n        <ion-label floating>{{ \'First Name\' | translate }}</ion-label>\n        <ion-input type="text" [(ngModel)]="account.firstname" name="firstname"></ion-input>\n      </ion-item>\n      <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors !== undefined && signup_result.errors.firstname !== undefined" class="text-danger">\n          {{signup_result.errors?.firstname}}\n      </div>\n      <ion-item>\n        <ion-label floating>{{ \'Last Name\' | translate }}</ion-label>\n        <ion-input type="text" [(ngModel)]="account.lastname" name="lastname"></ion-input>\n      </ion-item>\n      <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors !== undefined && signup_result.errors.lastname !== undefined" class="text-danger">\n          {{signup_result.errors?.lastname}}\n      </div>\n      <ion-item>\n        <ion-label floating>{{ \'Email Address\' | translate }}</ion-label>\n        <ion-input type="text" [(ngModel)]="account.email" name="email"></ion-input>\n      </ion-item>\n      <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors !== undefined && signup_result.errors.email !== undefined" class="text-danger">\n          {{signup_result.errors?.email}}\n      </div>\n      <ion-item>\n        <ion-label floating>{{ \'Password\' | translate }}</ion-label>\n        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>\n      </ion-item>\n      <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors !== undefined && signup_result.errors.password !== undefined" class="text-danger">\n          {{signup_result.errors?.password}}\n      </div>\n      <ion-item>\n        <ion-label floating>{{ \'Confirm Password\' | translate }}</ion-label>\n        <ion-input type="password" [(ngModel)]="account.confirmed_password" name="confirmed_password"></ion-input>\n      </ion-item>\n      <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors !== undefined && signup_result.errors.confirmed_password !== undefined" class="text-danger">\n          {{signup_result.errors?.confirmed_password}}\n      </div>\n      <div padding>\n        <button ion-button color="primary" block>{{ \'SIGNUP_BUTTON\' | translate }}</button>\n      </div>\n\n    </ion-list>\n  </form>\n</ion-content>'/*ion-inline-end:"C:\marketplace_ionic\src\pages\signup\signup.html"*/
+            selector: 'page-tabs',template:/*ion-inline-start:"C:\Users\Joed\marketplace_ionic\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" [tabTitle]="tab1Title" tabIcon="home"></ion-tab>\n\n  <ion-tab [root]="tab2Root" [tabTitle]="tab2Title" tabIcon="search"></ion-tab>\n\n  <ion-tab [root]="tab3Root" [tabTitle]="tab3Title" tabIcon="cog"></ion-tab>\n\n</ion-tabs>'/*ion-inline-end:"C:\Users\Joed\marketplace_ionic\src\pages\tabs\tabs.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_3__providers_providers__["d" /* User */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["m" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* LoadingController */]])
-    ], SignupPage);
-    return SignupPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1__ngx_translate_core__["c" /* TranslateService */]])
+    ], TabsPage);
+    return TabsPage;
 }());
 
-//# sourceMappingURL=signup.js.map
+//# sourceMappingURL=tabs.js.map
 
 /***/ })
 

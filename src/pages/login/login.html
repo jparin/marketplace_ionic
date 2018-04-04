@@ -1,33 +1,43 @@
 
-<ion-header>
+<ion-header >
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>{{ 'LOGIN_TITLE' | translate }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content>
+<ion-content class="login-content">
   <form (submit)="doLogin()">
     <ion-list>
         <img class="login-logo" src="assets/img/appicon.png">
         <h1>CEstates</h1>
-        <p>Marketplace</p>
+        <p class="sub-heading">Marketplace</p>
       <ion-item>
-        <ion-label fixed>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-label>{{ 'EMAIL' | translate }}</ion-label>
         <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label fixed>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-label>{{ 'PASSWORD' | translate }}</ion-label>
         <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
       </ion-item>
-
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            
+          </ion-col>
+          <ion-col>
+            <a href="" class="forgot-password">Forgot Password?</a>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
       <div padding>
         <button ion-button color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
-      </div>
-
+        <button ion-button color="secondary" block  (click)="signup()" type="button">{{ 'SIGNUP_BUTTON' | translate }}</button>
+      </div>  
     </ion-list>
   </form>
 </ion-content>

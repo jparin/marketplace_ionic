@@ -19,49 +19,55 @@ export class Items {
         "name": "Azalea Place",
         "profilePic": "assets/img/properties/azalea.jpg",
         "about": "Modern Serenity at the heart of Cebu.",
-        "price": 1000000,
-        "Unit for sale(%)" : 20,
-        "Available Slots" : 4
+        "price_per_slot": 1000000,
+        "city" : "Taguig",
+        "available_slots" : 4,
+        "participant" : 2
       },
       {
         "name": "Galleria Residences",
         "profilePic": "assets/img/properties/galleria-residence.jpg",
         "about": "Amenities beyond compare, life above the ordinary.",
-        "price": 2000000,
-        "Unit for sale(%)" : 20,
-        "Available Slots" : 4
+        "price_per_slot": 2000000,
+        "city" : "Taguig",
+        "available_slots" : 4,
+        "participant" : 3
       },
       {
         "name": "Magnolia Residences",
         "profilePic": "assets/img/properties/magnolia-residence.jpg",
         "about": "Creating new dimensions in your neighborhood.",
-        "price": 3000000,
-        "Unit for sale(%)" : 20,
-        "Available Slots" : 4
+        "price_per_slot": 3000000,
+        "city" : "Las Pinas",
+        "available_slots" : 4,
+        "participant" : 6
       },
       {
         "name": "The Radiance Manila Bay",
         "profilePic": "assets/img/properties/Radiance-Manila-Bay.jpg",
         "about": "A life of wellness amidst the magnificent Manila bay.",
-        "price": 4000000,
-        "Unit for sale(%)" : 20,
-        "Available Slots" : 4
+        "price_per_slot": 4000000,
+        "city" : "Pasay",
+        "available_slots" : 4,
+        "participant" : 10
       },
       {
         "name": "The Sapphire Bloc",
         "profilePic": "assets/img/properties/Sapphire-Bloc.jpg",
         "about": "Make your life your own by picking the unique over the popular.",
-        "price": 5000000,
-        "Unit for sale(%)" : 20,
-        "Available Slots" : 4
+        "price_per_slot": 5000000,
+        "city" : "Tagaytay",
+        "available_slot" : 4,
+        "participant" : 10
       },
       {
         "name": "The Trion Towers",
         "profilePic": "assets/img/properties/The-Trion-Towers.jpg",
         "about": "The fastest growing commercial and business districts in Taguig City.",
-        "price": 6000000,
-        "Unit for sale(%)" : 20,
-        "Available Slots" : 4
+        "price_per_slot_per_slot": 6000000,
+        "city" : "Taguig",
+        "available_slots" : 4,
+        "participant" : 10
       }
     ];
 
