@@ -1,0 +1,178 @@
+page-wallet {
+    
+    
+
+    .cet-balance-wrap {
+        margin: 20px 20px 20px 20px;
+        padding: 20px 0px;
+        background-image: url('../assets/imgs/wallet_bg.png');
+        background-size: 100px;
+        background-repeat: no-repeat;
+        background-position: right center;
+        overflow: hidden;
+
+        .cet-balance-container {
+            width: 70%;
+            text-align: center;
+        }
+
+        span.cet-label {
+            color:#fff;
+            font-size: 1.6rem;
+        }
+
+        span.cet-amount {
+            color: #fff;
+            font-weight: bold;
+            font-size: 3rem;
+        }
+
+        .buy-cet-wrap {
+            button {
+                width: 80px !important;
+              margin-top: 10px;   
+            }
+            text-align: center;
+        }
+
+        .withdraw-cet-wrap {
+            border-top: 1px dashed #e3e3e3;
+            margin-top: 10px;
+            button {
+                width: 100% !important;
+                margin-top: 10px;
+            }
+            text-align: left;
+        }
+        
+        p {
+            margin-top: 4px;
+            color: #95989A;
+        }
+
+        div.controls {
+            
+            margin-top: 20px;
+
+            button {
+                background-color:#2699FB;
+                color: #fff;
+                padding: 6px 10px;
+                width: 80px;
+                margin-right: 10px;
+                border-radius: 6px;
+                -webkit-border-radius: 6px;
+                -moz-border-radius: 6px;
+            }
+
+            button:nth-last-of-type(1) {
+                margin-right: 0px;
+            }
+        } 
+       
+    }
+
+    div.other-currencies {
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 4px;
+        border: 1px dashed #e3e3e3;
+        margin: 0 auto;
+        box-sizing: border-box;
+        > div {
+            margin-bottom: 4px;
+        }
+        .btc-label, .eth-label, .xem-label {
+           font-size: 1rem;
+           color: #fff;
+        }
+        .btc-amount, .eth-amount, .xem-amount {
+           font-size: 1.4rem;
+           color: #fff;
+        }
+    }
+   
+
+    div.properties-token-wrap {
+
+        div.properties-header {
+            border-bottom: 1px solid #848484;
+            display: flex;
+
+            h1 {
+                color: #fff;
+                font-size: 2.4rem;
+                font-weight: normal;
+                padding-left: 20px;
+            }
+            
+            
+            div:first-child {
+                // padding: 20px;
+                flex-grow: 2;
+            }
+            div:last-child{
+                // padding: 20px;
+                flex-grow: 1;
+            }
+    
+            li {
+                font-size: 1rem;
+                margin: 10px 0px;
+            }
+        }
+       
+        div.properties-content {
+            padding: 0px 20px;
+            ul {
+                padding-left: 0px; 
+                overflow: hidden;
+
+                ul {
+                    overflow: hidden;
+                    li {
+                        float: left;
+                        margin-right: 20px;
+                    }
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    color: #95989A;
+                    i {
+                        color : #236298;
+                        font-size: 1.4rem !important;
+                    }
+                }
+
+                div.controls {
+                    margin-top: 10px;
+                    button {
+                        background-color:#236298;
+                        color: #fff;
+                        @include border-radius(8);
+                        padding: 6px 10px;  
+                    }
+                }
+
+                
+            }
+
+            > ul > li {
+                
+                border-bottom: 1px dashed #848484;
+                padding-bottom: 20px;
+            }
+
+            > ul > li:last-child {
+                border: none;
+            }
+            h2 {
+                font-size: 1.4rem;
+                margin-top: 20px;
+                padding: 0px; 
+            }
+        }
+    }
+}

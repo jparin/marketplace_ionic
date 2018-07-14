@@ -1,0 +1,37 @@
+<ion-content class="login-content">
+  <form (submit)="doLogin()">
+    <ion-list>
+        <img class="login-logo" src="assets/imgs/logo.png">
+        <p class="sub-heading">REAL ESTATE TOKENIZED MARKETPLACE</p>
+      <ion-item>
+        <ion-label>{{ 'EMAIL' | translate }}</ion-label>
+        <ion-input type="email" [(ngModel)]="account.email" name="email"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label>{{ 'PASSWORD' | translate }}</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+      </ion-item>
+      
+      <ion-grid class="no-padding-top">
+        <ion-row>
+          <ion-col>
+            
+          </ion-col>
+          <ion-col>
+            <a href="" class="forgot-password">Forgot Password?</a>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div padding class="controls">
+        <button ion-button (click)="doLogin()" color="primary" block>{{ 'LOGIN_BUTTON' | translate }}</button>
+        <p>{{ 'LOGIN_OR' | translate }}</p>
+        
+        <button ion-button block  class="fb-login-btn" type="button"> <ion-icon name="logo-facebook" class="fb-icon"></ion-icon> {{ 'LOGIN_WITH_FB' | translate }}</button>
+        <div style="text-align:center;">
+          <a href="javascript:void(0)" (click)="signup()" class="create-new-account">Create a New Account</a>
+        </div>
+      </div>  
+    </ion-list>
+  </form>
+</ion-content>

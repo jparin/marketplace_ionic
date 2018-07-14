@@ -1,0 +1,41 @@
+<div *ngIf="showSplash" class="splash">
+  <div class="sk-cube-grid">
+      <div class="sk-cube sk-cube1"></div>
+      <div class="sk-cube sk-cube2"></div>
+      <div class="sk-cube sk-cube3"></div>
+      <div class="sk-cube sk-cube4"></div>
+      <div class="sk-cube sk-cube5"></div>
+      <div class="sk-cube sk-cube6"></div>
+      <div class="sk-cube sk-cube7"></div>
+      <div class="sk-cube sk-cube8"></div>
+      <div class="sk-cube sk-cube9"></div>
+    </div>
+</div>
+
+<ion-menu [content]="content">
+        <ion-header>
+          <ion-toolbar class="menu-toolbar">
+            <img src="assets/imgs/horizontal-logo.png" class="logo-nav" alt="">
+            <ion-list class="nav-header">
+              <ion-item text-center>
+                <ion-avatar>
+                  <img src="assets/img/profile.png">
+                </ion-avatar>
+                <h2 class="dashboard-name">Elixes Becislao</h2>
+                <p class="side-menu-balance">132033.32 CET</p>
+              </ion-item>
+            </ion-list>
+          </ion-toolbar>
+        </ion-header>
+    
+        <ion-content class="menu-pages-list">
+          <ion-list>
+            <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)"><ion-icon name="{{p.icon}}" ></ion-icon>
+              {{p.title}}
+              
+            </button>
+          </ion-list>
+        </ion-content>
+    
+      </ion-menu>
+      <ion-nav #content [root]="rootPage"></ion-nav>

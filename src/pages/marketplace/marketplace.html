@@ -1,0 +1,94 @@
+<ion-header>
+
+    <ion-navbar color="dark">
+        <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+      <ion-title text-center> <h1>Marketplace</h1></ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <div class="property-list-wrap">
+    
+        <ion-row class="market-search-form">
+            <ion-col col-9>
+                <ion-searchbar [(ngModel)]="search_query" (ionInput)="getMarkets($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+                <ion-list class="search-list">
+                    <button ion-item (click)="openMarket(market)" *ngFor="let market of search_property_list">
+                        <!-- <ion-avatar property-start> -->
+                            <!-- <img [src]="market.name" /> -->
+                        <!-- </ion-avatar> -->
+                        <h2>{{market.name}}</h2>
+                        <p>{{market.location}}</p>
+                        <!-- <ion-note property-end *ngIf="property.note">{{market.note}}</ion-note> -->
+                    </button>
+                </ion-list>
+            </ion-col> 
+            <ion-col col-3>
+                <ion-item class="currency-select-wrap">
+                <ion-label class="currency-select-label">Currency</ion-label>
+                <ion-select [(ngModel)]="selected_currency" #currency_select (ionChange)="changeMarketCurrency(currency_select.value)">
+                    <ion-option value="USD" selected>USD</ion-option>
+                    <ion-option value="PHP">PHP</ion-option>
+                    <ion-option value="CET">CET</ion-option>
+                    <ion-option value="BTC">BTC</ion-option>
+                    <ion-option value="ETH">ETH</ion-option>
+                    <ion-option value="XEM">XEM</ion-option>
+                </ion-select>
+            </ion-item>
+            </ion-col> 
+        </ion-row>
+        <h3>CET Exchanges</h3>
+        <section class="cet-exchanges-wrap">
+            <li class="property-list" *ngFor="let market of currencies_list"> 
+                <div>
+                    <a href="javascript:void(0)" (click)="openMarket(market)"><h2>{{market.name}}</h2></a>
+                    <ul>
+                        <li>Last Price: <span>{{market.last_price}}</span> cet</li>
+                        <li><i class="fa fa-usd" aria-hidden="true"></i> <span>{{market.dollar}}</span></li>
+                        <li>24 Changes: <button  class="positive-sm-btn">{{market.changes_24}}</button></li>
+                    </ul>
+                </div>
+            </li>
+        </section>
+
+
+       
+        
+        <!-- <li class="property-list" *ngFor="let market of property_list"> 
+            <div>
+                <a href="javascript:void(0)" (click)="openMarket(market)"><h2>{{market.name}}</h2></a>
+                <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ market.location}}</p>
+                <ul>
+                    <li>Last Price: <span>{{market.last_price}}</span> {{market.base_currency}}</li>
+                    <li><i class="fa fa-usd" aria-hidden="true"></i> <span>{{market.dollar}}</span></li>
+                    <li>24 Changes: <button  class="positive-sm-btn">{{market.changes_24}}</button></li>
+                </ul>
+            </div>
+        </li> -->
+    </div>
+    <h3>Property Markets</h3>
+    <ion-grid class="property-listing-grid">
+        <ion-row>
+            <ion-col col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2 *ngFor="let market of property_list">
+                <ion-card>
+                
+                    <ion-item>
+                        <h2>{{market.name}}</h2>
+                        <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{ market.location}}</p>
+                    </ion-item>  
+                    <a href="javascript:void(0)" (click)="openMarket(market)"><img src="{{market.thumbnail}}"> </a>  
+                    <ion-row class="property-sub-info">
+                        <ion-col>               
+                            <div><b>Last Price:</b> {{market.last_price}} {{market.base_currency}}</div>        
+                            <div><b>24 Changes:</b> {{market.changes_24}}</div>
+                            <div><b>Pairing:</b> POT/{{market.base_currency}}</div>
+                        </ion-col>
+                    </ion-row>
+                
+                </ion-card>
+                   
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

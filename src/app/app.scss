@@ -1,4 +1,4 @@
-// http://ionicframework.com/docs/theming/
+// http://ionicframework.com/docs/v2/theming/
 
 
 // App Global Sass
@@ -14,3 +14,411 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+ion-title {
+	position: relative;
+	h1 {
+		font-size: 2rem;
+	}
+}
+
+.custom-spinner-box {
+    margin: auto;
+    background: url('../assets/img/logo-loader.gif') repeat transparent;
+    background-size: 100%;
+    width: 80px;
+    height: 80px;
+}
+
+.header-logo {
+	width: 140px;
+	margin: 0 auto;
+	display: block;
+}
+
+.nav-header > ion-item.item.item-block.item-md {
+	background-color: #1b2a49;
+}
+
+
+ion-header {
+	background-color: #1A2A4A !important;	
+}
+
+h1 {
+	font-family: "Orbitron", "Helvetica Neue", sans-serif;
+	color: #fff;
+}
+
+h2, h3, h4, h5, p, li, a{
+	font-family: "roboto", "Helvetica Neue", sans-serif;
+	color: #fff;
+}
+
+
+
+ul {
+	list-style: none;
+}
+
+.toolbar-title h1{
+	background-image: url("../assets/imgs/small-logo.png");
+	background-repeat: no-repeat;
+	background-size: 24px auto;
+	background-position: left center;
+	display: inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 7px;
+}
+
+button.back-button {
+	position: absolute;
+	bottom: 10px;
+	left: 8px;
+	z-index: 999999;
+}
+
+.toolbar-title {
+	padding: 0px 12px;
+}
+
+ion-title {
+	padding: 0px !important;
+}
+
+
+
+
+
+button.bar-buttons {
+	position: absolute !important;
+	bottom: 10px;
+}
+
+button.item.item-ios div.item-inner {
+	background-image:none;
+}
+
+.nav-header {
+	background-color: #1A2A4A;
+}
+
+.nav-header .item-ios {
+	background-color: #1A2A4A;
+}
+
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+	border-bottom: none;
+}
+
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+	border-bottom: none;
+}
+
+.list-ios > .item-block:first-child {
+	border-top: none;
+}
+
+.side-menu-balance {
+	color: #2899fb !important;
+}
+
+.menu-toolbar {
+
+	.toolbar-background {
+		background: #1A2A4A !important;
+	}
+	
+	.logo-nav {
+		width: 120px;
+		display: block;
+		margin: 10px auto;
+	}
+
+
+
+	.toolbar-title {
+		font-size: 2rem !important;
+	}
+
+	.menu-sub-heading {
+		display: block;
+		text-align: center;
+		margin-bottom: 0px;
+		font-style: italic;
+	}
+
+	.menu-other-content {
+		font-size: 1.4rem;
+		display:block;
+		text-align:center;
+		padding: 10px;
+
+		ion-icon {
+			color: #00aeef;
+			margin-right: 8px;
+		}
+
+	}
+
+	button {
+		div {
+			border-bottom: none !important;
+		}
+	}
+
+	ion-avatar {
+		img {
+			width: 80px;
+			height: 80px;
+			margin: 0 auto 10px;
+		
+		}
+	}
+	
+}
+
+// SIDE MENU
+.menu-pages-list {
+
+
+
+	div ion-list button {
+
+		color: #fff;
+		background-color: #1A2A4A;
+
+		border-bottom: 1px solid #213358;
+		ion-icon {
+			color: #e3e3e3;
+			padding-right:4px;
+		}
+
+		div{
+			box-shadow: none;
+			border: none !important;
+		}
+	}
+
+	div ion-list button:hover {
+		color: #fff;
+		background-color: #1A2A4A;
+	} 
+}
+
+.tabbar {
+	background-color: #15213A !important;
+}
+
+.tab-button-text {
+	color: #fff;
+}
+.tab-button-icon  {
+	color: #fff !important;
+}
+
+.tab-button[aria-selected=true] .tab-button-icon, .tab-button[aria-selected=true] span {
+	color: #2699FB !important;
+}
+
+.tab-button[aria-selected=true] {
+	color: #2699FB !important;
+}
+
+
+ion-content, ion-navbar {
+	background-color: #1A2A4A !important;
+}
+
+
+
+ion-navbar {
+	padding-top: 0px !important;
+
+	.nav-button-trigger {
+		position: absolute;
+		top: 16px;
+		right: 10px;
+		font-size: 2rem;
+	}
+}
+
+.toolbar-title-ios {
+
+	img {
+		top: 14px;
+	}
+}
+
+.property-list-wrap {
+	p {
+		font-size: 1rem;
+		margin-left: 20px;
+	}
+	h2 {
+	font-size: 1.4rem;
+	margin-left: 20px;
+	}   
+	a {
+		text-decoration: none;
+	}
+	padding-left: 0px;
+	li.property-list{
+		i {
+			color: #2699FB;
+			font-size: 1.2rem;
+		}
+		border-bottom: 1px solid #656E81;
+		padding-top: 5px;
+		padding-bottom: 10px;
+		
+		ul {
+			padding-left: 10px;
+			margin-left: 20px;
+			overflow: hidden;
+			li {
+				float: left;
+				margin-right: 20px;
+				font-size: 1.2rem;
+			}
+
+			li:last-child {
+				margin-right: 0px;
+			}
+		}
+
+		h2 {
+			margin-top: 5px;
+		}
+	}
+
+
+	
+}
+
+
+
+/*************** UTILITIES ******************/
+.no-padding-top {
+	padding-top: 0px !important;
+}
+
+.m-b-20 {
+	margin-bottom: 20% !important;
+}
+
+.active-page-sidemenu {
+	background-color: #f8f8f8;
+	color: #1A2A4A;
+}
+
+.white {
+	background-color: #fff;
+}
+.positive-sm-btn {
+	background-color: #099B0E !important;
+	color: #fff;
+	padding: 2px 4px !important;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.danger-sm-btn {
+	background-color: #C11E0B !important;
+	color: #fff;
+	padding: 2px 4px !important;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.alert-head {
+	background-color: #1a2a4a !important;
+ }
+
+ .text-danger {
+	 color: #C11E0B !important;
+ }
+
+ /******** SPLASH ********/
+.splash {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 9999999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+}
+ /******** SPINNER ********/
+ .sk-cube-grid {
+	width: 40px;
+	height: 40px;
+	margin: 100px auto;
+  }
+  
+  .sk-cube-grid .sk-cube {
+	width: 33%;
+	height: 33%;
+	background-color: #333;
+	float: left;
+	-webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+			animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+  }
+  .sk-cube-grid .sk-cube1 {
+	-webkit-animation-delay: 0.2s;
+			animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube2 {
+	-webkit-animation-delay: 0.3s;
+			animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube3 {
+	-webkit-animation-delay: 0.4s;
+			animation-delay: 0.4s; }
+  .sk-cube-grid .sk-cube4 {
+	-webkit-animation-delay: 0.1s;
+			animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube5 {
+	-webkit-animation-delay: 0.2s;
+			animation-delay: 0.2s; }
+  .sk-cube-grid .sk-cube6 {
+	-webkit-animation-delay: 0.3s;
+			animation-delay: 0.3s; }
+  .sk-cube-grid .sk-cube7 {
+	-webkit-animation-delay: 0s;
+			animation-delay: 0s; }
+  .sk-cube-grid .sk-cube8 {
+	-webkit-animation-delay: 0.1s;
+			animation-delay: 0.1s; }
+  .sk-cube-grid .sk-cube9 {
+	-webkit-animation-delay: 0.2s;
+			animation-delay: 0.2s; }
+  
+  @-webkit-keyframes sk-cubeGridScaleDelay {
+	0%, 70%, 100% {
+	  -webkit-transform: scale3D(1, 1, 1);
+			  transform: scale3D(1, 1, 1);
+	} 35% {
+	  -webkit-transform: scale3D(0, 0, 1);
+			  transform: scale3D(0, 0, 1); 
+	}
+  }
+  
+  @keyframes sk-cubeGridScaleDelay {
+	0%, 70%, 100% {
+	  -webkit-transform: scale3D(1, 1, 1);
+			  transform: scale3D(1, 1, 1);
+	} 35% {
+	  -webkit-transform: scale3D(0, 0, 1);
+			  transform: scale3D(0, 0, 1);
+	} 
+  }
+
+ /******* MIXIN **********/
+ @mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}

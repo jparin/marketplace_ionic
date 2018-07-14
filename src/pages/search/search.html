@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+  <ion-title text-center> <h1>{{ 'SEARCH_TITLE' | translate }}</h1></ion-title>
+  </ion-navbar>
+</ion-header> 
+
+<ion-content>
+  <ion-searchbar (ionInput)="getMarkets($event)" placeholder="{{ 'SEARCH_PLACEHOLDER' | translate }}"></ion-searchbar>
+  <ion-list>
+    <button ion-item (click)="openMarket(market)" *ngFor="let market of currentMarkets">
+      <!-- <ion-avatar property-start> -->
+        <!-- <img [src]="market.name" /> -->
+      <!-- </ion-avatar> -->
+      <h2>{{market.name}}</h2>
+      <p>{{market.location}}</p>
+      <!-- <ion-note property-end *ngIf="property.note">{{market.note}}</ion-note> -->
+    </button>
+  </ion-list>
+</ion-content>

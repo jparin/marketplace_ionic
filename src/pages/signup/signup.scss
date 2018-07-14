@@ -1,0 +1,41 @@
+page-signup {
+    .text-danger {
+        color: red;
+    }
+    
+    h1 {
+        text-align: center;
+        color: #1A2A4A;
+    }
+
+    .form-terms-label-wrap p {
+        color: #333;
+    }
+    
+    .container-form {
+        margin: 20px;
+        padding: 10px;
+        background-color:#fff;
+    }
+
+    ion-input {
+        border: 1px solid #1A2A4A;
+        padding: 0px 20px;
+       
+    }
+
+    ion-label {
+        margin-left: 10px !important;
+        color: #1A2A4A !important;
+
+    }
+
+    .item-block:first-child {
+        border: none !important;
+    }
+
+    .item-inner, .item-inner:hover {
+        border: none !important;
+    }
+    
+}

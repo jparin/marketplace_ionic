@@ -1,0 +1,265 @@
+<!--
+  Generated template for the TradePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="dark">
+      <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    <ion-title text-center> <h1>Trades</h1></ion-title>
+  </ion-navbar>
+</ion-header> 
+
+<ion-content>
+  <h2 text-center>{{market.name}} </h2>
+  <button class="favorite-button" (click)="favoriteButton(market)" [ngClass]="{'active-bg' : listed_as_favorite === true, 'not-active-bg' : listed_as_favorite === false}"> <ion-icon name="star"></ion-icon></button>
+  <div id="container"></div>
+  <div class="property-info" *ngIf="market.location !== undefined">
+    <h2>645sqm Lot for sale at Banyan Ridge Timberland Heights 
+      San Mateo</h2>
+      <p class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Philippines, San Mateo, Malanday Malanday, San Mateo</p>
+      <button (click)="viewPropertyDetails()">View</button>
+  </div>
+  <div class="trade-bidding">
+    <ion-grid>
+      <ion-row class="column-label">
+        <ion-col>Bid</ion-col>
+        <ion-col>Ask</ion-col>
+      </ion-row>
+      <ion-row class="sub-column-label">
+        <ion-col>Qty</ion-col>
+        <ion-col>Amount({{market.base_currency}})</ion-col>
+        <ion-col>Qty</ion-col>
+        <ion-col>Amount({{market.base_currency}})</ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="trading-list">
+      <ion-row>
+        <ion-col>10</ion-col>
+        <ion-col>333</ion-col>
+        <ion-col>10</ion-col>
+        <ion-col>333</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>10</ion-col>
+        <ion-col>332</ion-col>
+        <ion-col>10</ion-col>
+        <ion-col>333</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>10</ion-col>
+        <ion-col>313</ion-col>
+        <ion-col>20</ion-col>
+        <ion-col>333</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>10</ion-col>
+        <ion-col>3</ion-col>
+        <ion-col>10</ion-col>
+        <ion-col>6</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>12</ion-col>
+        <ion-col>313</ion-col>
+        <ion-col>20</ion-col>
+        <ion-col>333</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>33</ion-col>
+        <ion-col>3</ion-col>
+        <ion-col>10</ion-col>
+        <ion-col>6</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="trade-bidding-form">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+            
+            <form action="">
+              <h3>Buy</h3>
+              <div>
+                <label for="buy_qty">Qty<span>:</span></label>
+                <input type="number" name="qty" id="buy_qty">
+              </div>
+              <div>
+                <label for="buy_price">Price<span>:</span></label>
+                <input type="number" name="buy_price">
+              </div>
+              <div>
+                  <label for="buy_total">Total<span>:</span></label>
+                  <input type="number" name="buy_total" readonly>
+              </div>
+              <div>
+                  <label for="buy_fee">Fee(0.15%)<span>:</span></label>
+                  <input type="number" name="buy_fee" readonly>
+              </div>
+              <div>
+                  <label for="buy_net_total">Net Total<span>:</span></label>
+                  <input type="number" name="buy_net_total" readonly>
+              </div>
+              <div text-center>
+                <button class="buy-order-btn">Submit Buy Order</button>
+              </div>
+            </form>
+            
+        </ion-col>
+        <ion-col>
+          <form action="">
+            <h3>Sell</h3>
+            <div>
+                <label for="">Qty<span>:</span></label>
+                <input type="number" name="sell_qty" id="sell_qty">
+              </div>
+              <div>
+                <label for="">Price<span>:</span></label>
+                <input type="number" name="sell_price" id="sell_price">
+              </div>
+              <div>
+                  <label>Total<span>:</span></label>
+                  <input type="number" name="sell_total" readonly>
+              </div>
+              <div>
+                  <label>Fee(0.15%)<span>:</span></label>
+                  <input type="number" name="sell_fee" readonly>
+              </div>
+              <div>
+                  <label>Net Total<span>:</span></label>
+                  <input type="number" name="sell_net_total" readonly>
+              </div>
+              <div text-center>
+                <button class="sell-order-btn">Submit Sell Order</button>
+              </div>
+          </form>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="recent-trade-list">
+    <h2>Recent Market Trades</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Type</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>{{market.base_currency}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2018-05-06 17:38:30</td>
+          <td>buy</td>
+          <td>0.00000001</td>
+          <td>17580.00000000</td>
+          <td>0.00017580</td>
+        </tr>
+        <tr>
+          <td>2018-05-06 17:38:30</td>
+          <td>buy</td>
+          <td>0.00000001</td>
+          <td>17580.00000000</td>
+          <td>0.00017580</td>
+        </tr>
+        <tr>
+          <td>2018-05-06 17:38:30</td>
+          <td>buy</td>
+          <td>0.00000001</td>
+          <td>17580.00000000</td>
+          <td>0.00017580</td>
+        </tr>
+        <tr>
+          <td>2018-05-06 17:38:30</td>
+          <td>buy</td>
+          <td>0.00000001</td>
+          <td>17580.00000000</td>
+          <td>0.00017580</td>
+        </tr>
+        <tr>
+          <td>2018-05-06 17:38:30</td>
+          <td>buy</td>
+          <td>0.00000001</td>
+          <td>17580.00000000</td>
+          <td>0.00017580</td>
+        </tr>
+        <tr>
+          <td>2018-05-06 17:38:30</td>
+          <td>buy</td>
+          <td>0.00000001</td>
+          <td>17580.00000000</td>
+          <td>0.00017580</td>
+        </tr>
+        <tr>
+          <td>2018-05-06 17:38:30</td>
+          <td>buy</td>
+          <td>0.00000001</td>
+          <td>17580.00000000</td>
+          <td>0.00017580</td>
+        </tr>  
+        <tr>
+            <td>2018-05-06 17:38:30</td>
+            <td>buy</td>
+            <td>0.00000001</td>
+            <td>17580.00000000</td>
+            <td>0.00017580</td>
+          </tr>
+          <tr>
+            <td>2018-05-06 17:38:30</td>
+            <td>buy</td>
+            <td>0.00000001</td>
+            <td>17580.00000000</td>
+            <td>0.00017580</td>
+          </tr>
+          <tr>
+            <td>2018-05-06 17:38:30</td>
+            <td>buy</td>
+            <td>0.00000001</td>
+            <td>17580.00000000</td>
+            <td>0.00017580</td>
+          </tr>
+          <tr>
+            <td>2018-05-06 17:38:30</td>
+            <td>buy</td>
+            <td>0.00000001</td>
+            <td>17580.00000000</td>
+            <td>0.00017580</td>
+          </tr>
+          <tr>
+            <td>2018-05-06 17:38:30</td>
+            <td>buy</td>
+            <td>0.00000001</td>
+            <td>17580.00000000</td>
+            <td>0.00017580</td>
+          </tr>      
+      </tbody>
+    </table>
+  </div>
+  <div class="property-co-owners" *ngIf="market.location !== undefined">
+      <h2>Property Co-Owners</h2>
+      <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Owns</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mico Mattos</td>
+              <td>30 token</td>
+              <td><a ion-button style="background-color:#33518b" href="javascript:void(0)" (click)="viewProfile(1)"><button><i class="fa fa-user" aria-hidden="true"></i></button></a></td>
+            </tr>
+            <tr>
+              <td>Satoshi Nakamoto</td>
+              <td>20 token</td>
+              <td><a ion-button  style="background-color:#33518b" href="javascript:void(0)" (click)="viewProfile(2)"><button><i class="fa fa-user" aria-hidden="true"></i></button></a></td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</ion-content>

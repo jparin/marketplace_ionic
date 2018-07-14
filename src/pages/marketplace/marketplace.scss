@@ -1,0 +1,174 @@
+page-marketplace {
+
+	h3 {
+		font-size: 1.4rem;
+		text-align: center;
+		padding: 10px;
+		background-color: #26437b;
+		box-shadow: 1px 0px 6px #3f6bbf;
+	}
+
+    .property-sub-details-grid {
+        font-size: 1.2rem;
+        background: #fbfbfb;
+		border: 1px solid #9ac5eb !important;
+		
+		
+    }
+
+	.cet-exchanges-wrap {
+		// background-color: #e3e3e3;
+
+		> li {
+			border-bottom: 1px dashed #243b69 !important;
+		}
+	}
+
+	.market-search-form {
+
+		h2 {
+			color: #333;
+		}
+
+		height: 54px;
+
+		ion-searchbar {
+			background: none !important;
+		}
+
+		select {
+			height: 30px;
+			border: none;
+			margin-top: 8px;
+			padding-right: 20px;
+			border-radius: 5px;
+			height: 3rem;
+			font-size: 1.4rem;
+			font-weight: 400;
+			color: #333;
+			background-color: #fff;
+			padding-left: 4px;
+		}
+
+
+		.searchbar-input {
+			padding: 0 28px;
+			border-radius: 5px;
+			height: 3rem;
+			font-size: 1.4rem;
+			font-weight: 400;
+			color: #000;
+			background-color: #fff;
+			
+		}
+
+		.searchbar-search-icon {
+			left: 9px;
+			top: 9px;
+			font-family: "Ionicons";
+			content: "\f2c0";
+			margin-left: 0px;
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			background-repeat: no-repeat;
+			background-size: 13px;
+		
+		}
+
+		.filter-crypto-down-icon {
+			position: absolute;
+			top: 20px;
+			right: 37px;
+			color: #1a2a4a;
+		}
+
+		.currency-select-wrap {
+			.currency-select-label { 
+				color: #fff !important;
+				display: none;
+			}
+	
+			.select-text {
+				overflow: visible !important;
+				color: #555;
+				margin-right: 4px;
+				font-size: 1.6rem;
+			}
+
+			.select-icon {
+				width: 20px;
+			}
+
+			ion-select {
+				padding: 0px;
+				max-width: 100%;
+				margin: 0px;
+
+				button {
+					padding: 0px;
+				}
+			}
+
+			ion-item {
+				margin-top: 8px;
+				border-radius: 4px;
+				padding:  0px;
+			}
+			min-height: 30px;
+			border-radius: 4px;
+			margin-top: 8px;
+		}
+		
+		.search-list {
+			button {
+				padding-left: 0px;
+			}
+			button:first-child {
+				border-radius: 4px 4px 0px 0px;
+			}
+			button:last-child {
+				border-radius: 0px 0px 4px 4px;
+			}
+		}
+	}
+
+
+	.property-listing-grid {
+		ion-col {
+			padding: 0px;
+		}
+
+		img {
+			width: 100%;
+			height: 120px;
+		}
+
+		.property-sub-info {
+			div {
+				font-size: 1.2rem;
+			}
+			padding: 10px;
+		}
+
+		ion-col {
+			padding: 0px;
+		}
+
+		h2 {
+			color: #333;
+		}
+
+		p {
+			font-size: 1.1rem;	
+		}
+
+		ion-card {
+			padding: 0px;
+			margin: 0px;
+			width: 100%;
+			border: 1px solid #fff;
+		}
+	}	
+	
+}

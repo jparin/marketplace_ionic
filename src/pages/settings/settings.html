@@ -1,0 +1,32 @@
+<ion-header>
+
+<ion-navbar color="dark">
+  <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+  <ion-title text-center> <h1>Settings</h1></ion-title>
+</ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-grid class="settings-menu">
+    <ion-row>
+      <ion-col col-6>
+        <button (click)="goChangePassword()"><i class="fa fa-lock" aria-hidden="true"></i><strong>Change Password</strong></button>
+      </ion-col>
+      <ion-col col-6><button (click)="goNotificationList()"><i class="fa fa-bell" aria-hidden="true"></i><strong>Notifications</strong></button></ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-6><button (click)="goMyAccount()"><i class="fa fa-user" aria-hidden="true"></i><strong>My Profile</strong></button></ion-col>
+      <ion-col col-6><button (click)="goQuestions()"><i class="fa fa-question-circle" aria-hidden="true"></i><strong>Help</strong><br>Questions?</button></ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="privacy-controls">
+    <ion-item>
+        <ion-label> Hide Personal Information</ion-label>
+        <ion-toggle  checked="false"></ion-toggle>
+      </ion-item>
+  </div>
+  <p>If enabled other user will not see any information about you.</p> 
+
+
+</ion-content>

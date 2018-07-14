@@ -1,0 +1,38 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="dark">
+        <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+      <ion-title text-center> <h1>My Account</h1></ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="profile-wrap">
+    <img src="assets/img/profile.png">
+    <p class="name">Elixes Becislao</p>
+    <p class="account-level-status">Account Level: Basic</p>
+    <p><i class="fa fa-envelope" aria-hidden="true"></i> <span>eli@cestates.io</span></p>
+    <p><i class="fa fa-phone" aria-hidden="true"></i> <span>+63 915 522 6934</span></p>
+    <div class="account-level-update-wrap">
+      <h3>Upgrade Account</h3>
+      <div>
+        <button (click)="upgradeAccount(1)">Verify Account (Lvl 1 - User)<span>Status: Pending</span><span>Access: Trading</span></button>
+      </div>
+      <div>
+        <button (click)="upgradeAccount(2)">Verify Account (Lvl 2 - User)<span>Status: </span><span>Access: Trading, Upload Properties</span></button>
+      </div>
+      <div>
+        <button (click)="upgradeAccount(3)">Verify Account (Lvl 3 - Broker)<span>Status: </span><span>Access: Trading, Properties, Broker Incentives.</span></button>
+      </div>
+    </div>
+  </div>
+  
+</ion-content>

@@ -1,0 +1,70 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <!-- <ion-title></ion-title> -->
+    <img class="header-logo" src="assets/imgs/horizontal-logo.png">
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="container-form">
+    <form (submit)="doSignup()">
+      <h1>
+          {{ 'SIGNUP_TITLE' | translate }}
+      </h1>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>{{ 'First Name' | translate }}</ion-label>
+          <ion-input type="text" [(ngModel)]="account.firstname" name="firstname"></ion-input>
+        </ion-item>
+        <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors !== undefined && signup_result.errors.firstname !== undefined" class="text-danger">
+            {{signup_result.errors?.firstname}}
+        </div>
+        <ion-item>
+          <ion-label floating>{{ 'Last Name' | translate }}</ion-label>
+          <ion-input type="text" [(ngModel)]="account.lastname" name="lastname"></ion-input>
+        </ion-item>
+        <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors !== undefined && signup_result.errors.lastname !== undefined" class="text-danger">
+            {{signup_result.errors?.lastname}}
+        </div>
+        <ion-item>
+          <ion-label floating>{{ 'Email Address' | translate }}</ion-label>
+          <ion-input type="text" [(ngModel)]="account.email" name="email"></ion-input>
+        </ion-item>
+        <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors !== undefined && signup_result.errors.email !== undefined" class="text-danger">
+            {{signup_result.errors?.email}}
+        </div>
+        <ion-item>
+          <ion-label floating>{{ 'Password' | translate }}</ion-label>
+          <ion-input type="password" [(ngModel)]="account.password" name="password"></ion-input>
+        </ion-item>
+        <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors !== undefined && signup_result.errors.password !== undefined" class="text-danger">
+            {{signup_result.errors?.password}}
+        </div>
+        <ion-item>
+          <ion-label floating>{{ 'Confirm Password' | translate }}</ion-label>
+          <ion-input type="password" [(ngModel)]="account.confirmed_password" name="confirmed_password"></ion-input>
+        </ion-item>
+        <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors !== undefined && signup_result.errors.confirmed_password !== undefined" class="text-danger">
+            {{signup_result.errors?.confirmed_password}}
+        </div>
+        <div  padding-top padding-left *ngIf="signup_result !== undefined && signup_result.errors !== undefined && signup_result.errors.referral_code !== undefined" class="text-danger">
+          {{signup_result.errors?.referral_code}}
+        </div>  
+        <ion-item>
+          <ion-label floating>{{ 'Referral Code' | translate }}</ion-label>
+          <ion-input type="password" [(ngModel)]="account.referral_code" name="referral_code"></ion-input>
+        </ion-item>
+        <div padding class="form-terms-label-wrap">
+          <p text-center>By creating an account you agree to our Terms of Service and Privacy Policy</p>
+        </div>
+        <div padding>
+          <button ion-button color="primary" block>{{ 'SIGNUP_BUTTON' | translate }}</button>
+        </div>
+        
+      </ion-list>
+    </form>
+  </div> 
+</ion-content>

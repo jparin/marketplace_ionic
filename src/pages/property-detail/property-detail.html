@@ -1,0 +1,133 @@
+<ion-header>
+  <!-- <ion-navbar color="primary">
+    <ion-title>{{ property.name }}</ion-title>
+  </ion-navbar> -->
+  <ion-navbar color="dark">
+    <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+  <ion-title text-center> <h1>Property</h1></ion-title>
+</ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <!--
+  <div class="property-profile" text-center #profilePic [style.background-image]="'url(' + property.profilePic + ')'">
+  </div>
+
+  <div class="property-detail" padding>
+    <h2>{{property.name}}</h2>
+    <ion-grid class="property-sub-details-grid">
+      <ion-row>
+        <ion-col>
+          Price per slot(CET): <span>{{property.price_per_slot}}</span>
+        </ion-col>
+        <ion-col>
+          City: <span>{{property.city}}</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          Available slots: <span>{{property.available_slots}}</span>
+        </ion-col>
+        <ion-col>
+          Participant: <span>{{property.participant}}</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <p>{{property.about}}</p>
+  </div>
+  -->
+  <ion-slides pager="true">
+      <ion-slide>
+        <img src="./assets/img/properties/azalea/image_1.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+          <img src="./assets/img/properties/azalea/image_2.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+          <img src="./assets/img/properties/azalea/image_3.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+          <img src="./assets/img/properties/azalea/image_4.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+          <img src="./assets/img/properties/azalea/image_5.jpg" alt="">
+      </ion-slide>
+      <ion-toolbar>
+        </ion-toolbar>
+    </ion-slides>
+    <h2>645sqm Lot for sale at Banyan Ridge Timberland Heights 
+        San Mateo</h2>
+    <p class="location"><i class="fa fa-map-marker" aria-hidden="true"></i> Philippines, San Mateo, Malanday Malanday, San Mateo</p>
+     
+   
+    <div class="property-details">
+      <h3>Property Details</h3>
+      <ion-grid>
+        <ion-row>
+            <ion-col>Classification:</ion-col>
+            <ion-col>Resale</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Assessed Price:</ion-col>
+            <ion-col>5,000,322.00 php</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Floor Area(m^2):</ion-col>
+            <ion-col>24.00</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Bedrooms:</ion-col>
+            <ion-col>2</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Baths:</ion-col>
+            <ion-col>2</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Rooms(total):</ion-col>
+            <ion-col>3</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Fully Furnished:</ion-col>
+            <ion-col>Yes</ion-col>
+        </ion-row>
+      </ion-grid>
+      <h3>Amenities</h3>
+      <ion-grid>
+        <ion-row>
+            <ion-col>Gym</ion-col>
+            <ion-col>Reception Area</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Broadband Internet Available</ion-col>
+            <ion-col>Lobby</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Air Conditioning</ion-col>
+            <ion-col>CCTV</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Wifi</ion-col>
+            <ion-col>Indoor Pool</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Lounge</ion-col>
+            <ion-col>Jacuzzi</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Bar</ion-col>
+            <ion-col>Basement Parking</ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col>Shower Rooms</ion-col>
+            <ion-col>Landscaped Garden</ion-col>
+        </ion-row>
+      </ion-grid>
+      <h3>Map</h3>
+      <div #mapCanvas id="map_canvas"></div>
+      
+    </div>
+</ion-content>

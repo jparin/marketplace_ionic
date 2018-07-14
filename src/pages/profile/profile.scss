@@ -1,0 +1,73 @@
+page-profile {
+
+    div.profile-wrap{
+        img {
+            margin-top: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        p {
+            font-size: 1.6rem;
+        }
+        p.name {
+            font-size: 2.4rem;
+            margin-bottom: 0px;
+            font-weight: bold;
+        }
+        button {
+            width: 100px;    
+            padding: 10px 0px;
+            background-color: #1A2A4A;
+            border: 2px solid #BCE0FD;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.6rem;
+            margin-right: 5px;
+            margin-left: 5px;
+            @include border-radius(8);
+        }
+        text-align: center;
+    }
+    div.properties-token-owned {
+        padding-top: 20px;
+        h1 {
+            font-size: 2.2rem;
+            font-weight: normal;
+            border-bottom: 2px solid #e3e3e3;
+            padding-left: 20px;
+            padding-bottom: 2px;
+        }
+        h3 {
+            font-size: 1.4rem;
+        }
+        ul {
+            padding: 0px 20px;
+            li {
+                p {
+                    font-size: 1rem;
+                }
+                
+                div {
+                    overflow: hidden;
+                    span {
+                        float: left;
+                    }
+
+                    button {
+                        background-color: #236298;
+                        color: #fff;
+                        float: right;
+                        padding: 4px 10px;
+                        margin-right: 20px;
+                        border-radius: 6px;
+                        -moz-border-radius: 6px;
+                        -webkit-border-radius: 6px;
+                    }
+                }
+                border-bottom: 1px solid #21304E;
+                padding-bottom: 10px;
+            }
+        }
+    }
+}

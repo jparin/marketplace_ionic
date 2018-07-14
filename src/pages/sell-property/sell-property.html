@@ -1,0 +1,108 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="dark">
+      <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+      <ion-title text-center> <h1>Sell Property</h1></ion-title>
+    </ion-navbar>
+  </ion-header>
+  <ion-content>
+      
+      <ion-list>
+          <ion-item>
+            <!-- <div class="inform-wrap"> -->
+              <p><span class="text-danger">*</span> <span>means required.</span></p>
+            <!-- </div> -->
+          </ion-item>
+          <ion-item>
+            <ion-label stacked><span class="text-danger">*</span> Building Name </ion-label>
+            <ion-input type="text" placeholder="Building Name" ></ion-input>
+          </ion-item>
+          <ion-item >
+              <ion-label stacked><span class="text-danger">*</span> Complete Address</ion-label>
+              <ion-input type="text" placeholder="Unit No. Bld Name, St. Name, Province, Country "></ion-input>
+          </ion-item> 
+          <ion-item>
+            <ion-label stacked><span class="text-danger">*</span> TCT/OCT - Certified True Copy and Owner's Duplicate Copy</ion-label>
+            <ion-input type="file" name="tct_oct"></ion-input>
+          </ion-item>
+          <ion-item >
+            <ion-label stacked><span class="text-danger">*</span> TIN of Registered Owner</ion-label>
+            <ion-input type="text" placeholder="" name="tin"></ion-input>
+          </ion-item> 
+          <ion-item>
+            <ion-label stacked>Certificate of No-Improvement(if applicable)</ion-label>
+            <ion-input type="file" name="cert_no_improvement"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Tax Declaration - Certified True Copy Land Improvement(Optional)</ion-label>
+            <ion-input type="file" name="cert_no_improvement"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked><span class="text-danger">*</span> Real Property Clearance</ion-label>
+            <ion-input type="file" name="property_clearance"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked><span class="text-danger">*</span> Real Property Tax Receipt(Latest)</ion-label>
+            <ion-input type="file" name="property_clearance"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>eCAR - previous (if applicable)</ion-label>
+            <ion-input type="file" name="ecar"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked><span class="text-danger">*</span> Owner's copy of title.</ion-label>
+            <ion-input type="file" name="owner_copy_title"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked><span class="text-danger">*</span> Picture of the property from all sides.</ion-label>
+            <ion-input type="file" name="property_pictures" multiple></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked><span class="text-danger">*</span> Gov. issued ID of registered owner.</ion-label>
+            <ion-input type="file" name="gov_issued_id_registered_owner"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked><span class="text-danger">*</span> Vicity Map issued by the City or Provincial Assesor</ion-label>
+            <ion-input type="file" name="vicinity_map"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked><span class="text-danger">*</span> Management Certificate (for condominium ) and Certificate of Non-Delinquency of Association</ion-label>
+            <ion-input type="file" name="mng_cert_and_cert_of_non_deliq_of_assoc" multiple></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked><span class="text-danger">*</span> Certificate of marriage for married or Cert. of no marriage for single.</ion-label>
+            <ion-input type="file" name="cert_of_marriage_or_cert_of_no_marriage"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>DAR clearance(if applicable)</ion-label>
+            <ion-input type="file" name="dar"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>DAR clearance(if applicable)</ion-label>
+            <ion-input type="file" name="dar"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>Cancellation of Mortgage (if applicable)</ion-label>
+            <ion-input type="file" name="cancellation_of_mortgage"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked><span class="text-danger">*</span> BIR Registration if the Seller is Corporation</ion-label>
+            <ion-input type="file" name="bir_reg"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked><span class="text-danger">*</span> Board Resolution or Secretary's Cert. Authorizing the Company to transact</ion-label>
+            <ion-input type="file" name="board_reso"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked><span class="text-danger">*</span> BIR Forms(for  payments)</ion-label>
+            <ion-input type="file" name="bir_forms"></ion-input>
+          </ion-item>
+          <button ion-button full><ion-icon name="send" style="margin-right: 6px;"></ion-icon> Submit</button>
+        </ion-list>
+  </ion-content>
+  

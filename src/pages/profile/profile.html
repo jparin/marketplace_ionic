@@ -1,0 +1,44 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="dark">
+        <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+      <ion-title text-center> <h1>Profile</h1></ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="profile-wrap">
+      <img src="assets/img/{{user.image}}">
+      <p class="name">{{user.name}} {{current_page}}</p>
+      <p>{{user.address}}</p>
+      <p><i class="fa fa-envelope" aria-hidden="true"></i> <span>{{user.email}}</span></p>
+      <p><i class="fa fa-phone" aria-hidden="true"></i> <span>{{user.mobile}}</span></p>
+      <div class="controls">
+        <button type="button">Block</button>
+        <button type="button">Message</button>
+      </div>
+  </div>
+  <div class="properties-token-owned">
+    <h1>Properties Token Owned</h1>
+    <ul>
+      <li *ngFor="let property of user.properties">
+        <div>
+          <h3>{{property.title}}</h3>
+              <p><i class="fa fa-map-marker" aria-hidden="true"></i> {{property.address}}</p>
+              <div>
+                <span>Token owned: {{property.token_owned}}</span>
+                <button type="button" (click)="viewProperty(property.property_id)">View</button>
+              </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</ion-content>
