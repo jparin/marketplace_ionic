@@ -1,0 +1,8 @@
+{
+  "name": "cestates-platform",
+  "app_id": "a698ccbf",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
